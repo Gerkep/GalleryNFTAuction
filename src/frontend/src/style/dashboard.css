@@ -1,0 +1,64 @@
+.dashboard-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 30vw;
+    margin-top: 30vw;
+}
+.dashboard-link{
+    width: 100%;
+}
+.dashboard-choice{
+    width: 80vw;
+    height: 15vw;
+    margin: 5vw 10vw 5vw 10vw;
+    border-radius: 15%;
+}
+.text-field{
+    border-radius: 16px;
+}
+@media screen and (min-width: 1200px) {
+    .dashboard-container{
+        height: 30vw;
+        margin-top: 0vw;
+    }
+    .dashboard-link{
+        width: 44vw;
+    }
+    .dashboard-choice{
+        width: 25vw;
+        height: 8vw;
+        margin: 5vw 10vw 5vw 10vw;
+        border-radius: 15px;
+        font-size: 2vw;
+    }
+    .auction-form {
+        display: grid; 
+        grid-template-columns: 30vw 30vw 20vw; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "form-first-column form-second-column form-third-column"; 
+          margin-top: 4vw;
+          margin-left: 7vw;
+      }
+      .form-first-column { grid-area: form-first-column; }
+      .form-second-column { grid-area: form-second-column; }
+      .third-column{ grid-area: form-third-column; }
+    .text-field{
+        border-radius: 16px;
+        width: 20vw;
+        height: 4vw;
+        padding-left: 1vw;
+        font-size: 1.5vw;
+        margin: 1vw 0 1vw 0;
+    }
+    .submit-btn{
+        width: 17vw;
+        height: 3vw;
+        border-radius: 15px;
+        margin: 2.4vw 0 0 0 ;
+    }
+}

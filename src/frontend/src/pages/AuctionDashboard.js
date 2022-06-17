@@ -6,7 +6,7 @@ import api from "../api";
 import { Field, reduxForm } from 'redux-form';
 import { AuctionContract, provider } from "../ethereum/Contracts";
 import { ethers } from "ethers";
-import "../style/collection.css";
+import "../style/dashboard.css";
 
 class AuctionDashboard extends React.Component {
     renderError = ({error, touched}) => {
@@ -78,21 +78,30 @@ class AuctionDashboard extends React.Component {
         return (
             <div className="dashboard-page">
                 <Navbar/>
-                    <h1 className="dashboard-header">AUCITON DASHBOARD</h1>
+                    <div className="hl page-hl desktop"></div>
+                    <h1 className="page-header">AUCITON DASHBOARD</h1>
                     <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="auction-form">
+                        <div className="form-first-column">
                             <Field name="ArtworkTitle" component={this.renderTextField}/>
                             <Field name="Author" component={this.renderTextField}/>
                             <Field name="ImageURI" component={this.renderTextField}/>
                             <Field name="Description" component={this.renderTextField}/>
+                        </div>
+                        <div className="form-second-column">
                             <Field name="StartTime" component={this.renderTextField}/>
                             <Field name="EndTime" component={this.renderTextField}/>
                             <Field name="InitialPrice" component={this.renderTextField}/>
-                        <button className="submit-btn">ADD</button>
-                    </form>
-                    <button onClick={this.endAuction} className="submit-btn">END AUCTION</button>
+                        <button className="submit-btn button">ADD</button><br/>
+
                     <br/>
-                    <button onClick={this.pauseAuction}>PAUSE</button>
-                    <button onClick={this.unpauseAuction}>UNPAUSE</button>
+                        </div>
+                        <div className="third-column">
+                            <button onClick={this.endAuction} className="submit-btn button">END AUCTION</button>
+                            <button onClick={this.pauseAuction} className="submit-btn button">PAUSE</button>
+                        <button onClick={this.unpauseAuction} className="submit-btn button">UNPAUSE</button>
+                        </div>
+                    </form>
+
             </div>
         )
     }

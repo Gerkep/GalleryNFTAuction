@@ -9,13 +9,19 @@ import { ethers } from "ethers";
 import "../style/collection.css";
 import { Link } from "react-router-dom";
 
+import "../style/dashboard.css"
+
 class Dashboard extends React.Component {
     render(){
         return (
             <div className="dashboard-page">
                 <Navbar/>
-                <Link to="/dashboard/auction"><button>Auction Dashboard</button></Link>
-                <Link to="/dashboard/collection"><button>Collection Dashboard</button></Link>
+                <div className="hl page-hl desktop"></div>
+                <h1 className="page-header">DASHBOARD</h1>
+                <div className="dashboard-container">
+                    <Link to="/dashboard/auction" className="dashboard-link"><button className="button dashboard-choice">Auction Dashboard</button></Link>
+                    <Link to="/dashboard/collection" className="dashboard-link"><button className="button dashboard-choice">Collection Dashboard</button></Link>
+                </div>
             </div>
         )
     }

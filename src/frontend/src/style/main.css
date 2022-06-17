@@ -4,11 +4,13 @@
 }
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: white;
 }
 a{
     color: black;
     text-decoration: none;
 }
+.appearing{opacity: 0; transition: all 1s ease; }
 .button{
     background-color: black;
     color: white;
@@ -30,8 +32,8 @@ a{
     display: block;
 }
 .main-img{
-    width: 45vw;
-    height: 45vw;
+    width: 50vw;
+    height: 50vw;
     border-radius: 15px;
     background-position: center;
     background-size: 107%;
@@ -42,7 +44,7 @@ a{
 #red-img{
     background-image: url("../images/mainimg1.png");
     top: 16vh;
-    left: 11vw;
+    left: 8vw;
 }
 #colorful-img{
     background-image: url("../images/mainimg2.png");
@@ -50,9 +52,9 @@ a{
     left: 42vw;
 }
 .slogan{
-    margin: 53vh 0 0 5vw;
+    margin: 51vh 0 0 5vw;
     font-weight: 800;
-    font-size: 8.5vw;
+    font-size: 9vw;
 }
 .main-description{
     font-weight: 400;
@@ -65,7 +67,7 @@ a{
     width: 60vw;
     height: 14vw;
     border-radius: 20px;
-    margin: 10vw 0 0 5vw;
+    margin: 8vw 0 0 5vw;
     border: none;
     box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.296);
     font-size: 3.5vw;
@@ -100,7 +102,7 @@ a{
     height: 10vw;
     text-align: left;
     padding-left: 10%;
-    margin-top: 12vw;
+    margin-top: 11vw;
     font-weight: 400;
 }
 .iphone-mockup{
@@ -112,6 +114,7 @@ a{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    transform: translateX(0px);
 }
 .hl{
     margin: 40vw 0 0 0vw;
@@ -169,7 +172,7 @@ a{
 }
 .cta-btn{
     padding: 5vw;
-    width: 70vw;
+    width: 80vw;
     height: 60vw;
     border-radius: 25px;
     border: none;

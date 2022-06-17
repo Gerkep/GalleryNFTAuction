@@ -15,13 +15,28 @@ class CollectionPage extends React.Component {
         .catch(function (ex) {
             console.log('Response parsing failed. Error: ', ex);
         });;
+
+        //opacity from 0 to 1 observer
+        const appearing = document.querySelectorAll('.appearing');
+
+        //appering animation containers
+        function handleIntersection(entries) {
+            entries.map((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                observer.unobserve(entry.target);
+                }
+            });
+            }
+        const observer = new IntersectionObserver(handleIntersection);
+        appearing.forEach(appear => observer.observe(appear));
     }
 
     renderArtworks = () => {
         console.log(this.state.artworkList)
         const artworksToRender = this.state.artworkList.map((artwork) => {
             return(
-                <div className="artwork-container">
+                <div className="artwork-container appearing">
                     <ReactPlayer className="artwork" playing={true} loop={true} url={artwork.imageURL} />
                     <div className="artwork-name">{artwork.title}</div>
                     {artwork.openseaLink ? <a href={artwork.openseaLink} className="opensea-link">View on opensea</a> : ''}

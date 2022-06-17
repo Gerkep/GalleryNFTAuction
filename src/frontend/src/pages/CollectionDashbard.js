@@ -51,19 +51,26 @@ class CollectionDashboard extends React.Component {
         return (
             <div className="dashboard-page">
                 <Navbar/>
-                    <h1 className="dashboard-header">COLLECTION DASHBOARD</h1>
-                    <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="auction-form">
-                            <Field name="ArtworkTitle" component={this.renderTextField}/>
-                            <Field name="Author" component={this.renderTextField}/>
-                            <Field name="ImageURI" component={this.renderTextField}/>
-                            <Field name="Description" component={this.renderTextField}/>
-                            <Field name="OpenseaLink" component={this.renderTextField}/>
-                        <button className="submit-btn">ADD</button>
-                    </form>
-                    <form onSubmit={this.deleteFromCollection}>
-                        <input type="number" placeholder="ArtworkId" value={this.state.id} onChange={this.handleChange}></input>
-                        <input type="submit" value="DELETE"></input>
-                    </form>
+                    <div className="hl page-hl desktop"></div>
+                    <h1 className="page-header">COLLECTION DASHBOARD</h1>
+                    <div className="auction-form">
+                    <div className="form-first-column">
+                        <form onSubmit={this.props.handleSubmit(this.onSubmit)} >
+                                <Field name="ArtworkTitle" component={this.renderTextField}/>
+                                <Field name="Author" component={this.renderTextField}/>
+                                <Field name="ImageURI" component={this.renderTextField}/>
+                                <Field name="Description" component={this.renderTextField}/>
+                                <Field name="OpenseaLink" component={this.renderTextField}/>
+                                <button className="submit-btn button">ADD</button>
+                        </form>
+                        </div>
+                        <div className="form-second-column">
+                            <form onSubmit={this.deleteFromCollection}>
+                                <input type="number" className="text-field" placeholder="ArtworkId" value={this.state.id} onChange={this.handleChange}></input>
+                                <input type="submit" className="submit-btn button" value="DELETE"></input>
+                            </form>
+                        </div>
+                    </div>
             </div>
         )
     }

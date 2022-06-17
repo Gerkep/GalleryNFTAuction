@@ -23,21 +23,21 @@ class AuctionBid extends React.Component {
                         <div className="hl page-hl desktop"></div>
                         <h1 className="page-header">LIVE!</h1>
                         <div className="countdown-container">
-                            <p className="countdown"><p className="desktop countdown-text">Ends in:</p><b>{auction.timestamp}</b></p>
+                            1d 12h 12m 12s
                         </div>
                     </div>
                     <div className="painting-container">
                         <div className="auction-image"></div>
-                        <h2 className="painting-name">{auction.title}</h2>
-                        <h3 className="artist">{auction.artist}</h3>
+                        <h2 className="painting-name">dfgae</h2>
+                        <h3 className="artist">wrgaer</h3>
                         <div className="bid-container">
-                            <p className="last-bid">Last bid: {auction.initialPrice}</p>
+                            <p className="last-bid">Last bid: erwgtae</p>
                             <button className="bid-btn button"><div className="offer-img"></div>MAKE OFFER</button>
                         </div>
                     </div>
                     <div className="painting-about">
                         <h3 className="painting-about-header">ABOUT PAINTING</h3>
-                        <p className="painting-about-text">{auction.description}</p>
+                        <p className="painting-about-text">desfasdf</p>
                     </div>
                 </div>
             )

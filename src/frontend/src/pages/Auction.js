@@ -25,6 +25,21 @@ class AuctionPage extends React.Component {
         const highestBidInETH = ethers.utils.formatEther(highestBid);
         const highestBidAsNumber = highestBidInETH.toString();
         this.setState({auctions: auctions, highestBid: highestBidAsNumber, startTimeState: startTimeAsNumber, endTimeState: endTimeAsNumber, deposit: '', depositShowed: false});
+
+        //opacity from 0 to 1 observer
+        const appearing = document.querySelectorAll('.appearing');
+
+        //appering animation containers
+            function handleIntersection(entries) {
+             entries.map((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                observer.unobserve(entry.target);
+                }
+            });
+            }
+        const observer = new IntersectionObserver(handleIntersection);
+        appearing.forEach(appear => observer.observe(appear));
     }
     withdraw = async () => {
         await provider.send("eth_requestAccounts", []);
@@ -50,7 +65,7 @@ class AuctionPage extends React.Component {
                     <div className="auction-header">
                         <div className="hl page-hl desktop"></div>
                         <h1 className="page-header">LIVE!</h1>
-                        <div className="countdown-container">
+                        <div className="countdown-container appearing">
                             <p className="countdown">
                                 <div className="desktop countdown-text">
                                     {currentTime < this.state.startTimeState ? <div>Starts in: <Countdown targetDate={this.state.startTimeState}/></div> : <div>Ends in: <Countdown targetDate={this.state.endTimeState}/></div>}
@@ -58,9 +73,9 @@ class AuctionPage extends React.Component {
                         </div>
                     </div>
                     <div className="painting-container">
-                        <ReactPlayer className="auction-image" playing={true} loop={true} url={auction.imageURL} />
-                        <h2 className="painting-name">{auction.title}</h2>
-                        <h3 className="artist">{auction.artist}</h3>
+                        <ReactPlayer className="auction-image appearing" playing={true} loop={true} url={auction.imageURL} />
+                        <h2 className="painting-name appearing">{auction.title}</h2>
+                        <h3 className="artist appearing">{auction.artist}</h3>
                         <div className="bid-container">
                             <p className="last-bid">Highest bid: {this.state.highestBid}Ξ</p>
                             <Link to="/auction/bid"><button className="bid-btn button"><div className="offer-img"></div>MAKE OFFER</button></Link>
@@ -71,7 +86,7 @@ class AuctionPage extends React.Component {
                             <button onClick={this.withdraw} className="button withdraw-btn">WITHDRAW</button>
                             <p className="withdraw-note">If you withdraw your bid <b>you won't win this auction.</b></p>
                     </div>
-                    <div className="painting-about">
+                    <div className="painting-about appearing">
                         <h3 className="painting-about-header">ABOUT PAINTING</h3>
                         <p className="painting-about-text">{auction.description}</p>
                     </div>
