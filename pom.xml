@@ -72,7 +72,7 @@
                 <configuration>
 					<nodeVersion>v16.13.1</nodeVersion>
                     <npmVersion>8.1.2</npmVersion>
-                 	<workingDirectory>${project.basedir}/src/main</workingDirectory>
+                 	<workingDirectory>${project.basedir}/src/main/frontend</workingDirectory>
 					<installDirectory>${project.build.directory}</installDirectory>
                 </configuration>
                 <executions>
@@ -84,15 +84,6 @@
                         <configuration>
                             <nodeVersion>v16.13.1</nodeVersion>
                             <npmVersion>8.1.2</npmVersion>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>npm install</id>
-                        <goals>
-                            <goal>npm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>install</arguments>
                         </configuration>
                     </execution>
                     <execution>
