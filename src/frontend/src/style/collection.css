@@ -1,0 +1,57 @@
+.collection-container{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5vw 0 15vw 5vw;
+}
+.artwork-container{
+    width: 90vw;
+    padding-bottom: 10vw;
+    margin: 10vw 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.artwork{
+    width: 90vw;
+    height: 90vw;
+    border-radius: 15px;
+    max-width: 100vw;
+}
+.artwork-name{
+    width: 100%;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 900;
+    margin-top: 2vw;
+}
+.opensea-link{
+    margin-top: 2vw;
+    text-decoration: underline;
+}
+@media screen and (min-width: 1200px) {
+    .collection-container{
+        margin: 5vw 0 10vw 5vw;
+    }
+    .artwork-container{
+        width: 25vw;
+        padding-bottom: 4vw;
+        margin: 1.5vw 2.5vw 0 2.5vw;
+    }
+    .artwork{
+        width: 25vw !important;
+        height: 25vw;
+        max-width: 25vw;
+    }
+    .artwork-name{
+        font-size: 1.5vw;
+        font-weight: 400;
+        margin-top: 1vw;
+    }
+    .opensea-link{
+        margin-top: 0.5vw;
+        text-decoration: underline;
+    }
+}

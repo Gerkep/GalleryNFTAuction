@@ -1,0 +1,165 @@
+.footer{
+    height: 70vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+.footer-logo-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 13vw;
+}
+.footer-logo{
+    width: 30vw;
+    height: 13vw;
+    background-image: url("../images/victorwhite.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 7vh;
+}
+.footer-section{
+    width: 100%;
+    margin-top: 10vw;
+    text-align: center;
+}
+#customer-service-section{
+    margin-top: 20vw;
+}
+#connect-section{
+    margin-top: 1vw;
+}
+.footer-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+}
+.footer-link{
+    color: white;
+    font-size: 2.5vw;
+    margin: 0 2.5vw 0 2.5vw;
+}
+.contact-illustration{
+    height: 5vw;
+    width: 5vw;
+    margin-right: 2.5vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.footer-section-header{
+    font-weight: 500;
+}
+.contact-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 3vw;
+    margin-left: -5vw;
+}
+#telephone-illustration{
+    background-image: url("../images/phone.png");
+}
+#email-illustration{
+    background-image: url("../images/mail.png");
+}
+#address-illustration{
+    background-image: url("../images/pin.png");
+}
+.contribution{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.641);
+    font-size: 3vw;
+    margin-top: 8vw;
+}
+
+@media screen and (min-width: 1200px) {
+    .footer{
+        height: 42vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    .footer-logo-container{
+        width: 20vw;
+        height: 5vw;
+    }
+    .footer-logo{
+        width: 8vw;
+        height: 4vw;
+        margin-top: 14vh;
+        margin-left: 0vw;
+    }
+    .footer-section{
+        width: 20vw;
+        margin-top: 10vh;
+        margin-left: 0vw;
+        text-align: left;
+    }
+    #customer-service-section{
+        margin-top: 10vh;
+        margin-left: 10vw;
+    }
+    #connect-section{
+        margin-top: 10vh;
+    }
+    .footer-links{
+        width: 20vw;
+        flex-wrap: wrap;
+        justify-content: left;
+        margin-top: 1vw;
+    }
+    .footer-link{
+        width: 100%;
+        color: rgba(255, 255, 255, 0.725);
+        font-size: 1vw;
+        margin: 0.5vw 0 0.5vw 0;
+    }
+    .contact-illustration{
+        height: 2vw;
+        width: 2vw;
+        margin-right: 1vw;
+    }
+    .contact-container{
+        display: flex;
+        width: 27vw;
+        justify-content: left;
+    }
+    .contact{
+        display: flex;
+        justify-content: left;
+        font-size: 1vw;
+        margin-left: 0vw;
+        height: 24vh;
+        width: 20vw;
+        margin-top: 8vh;
+    }
+    #telephone-illustration{
+        background-image: url("../images/phone.png");
+    }
+    #email-illustration{
+        background-image: url("../images/mail.png");
+    }
+    #address-illustration{
+        background-image: url("../images/pin.png");
+    }
+    .contribution{
+        width: 100%;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.725);
+        font-size: 0.75vw;
+        margin-top: 1vw;
+        padding-left: 2vw;
+    }
+}

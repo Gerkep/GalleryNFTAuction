@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.button{
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    cursor: pointer;
+}
+.page-header{
+    text-align: center;
+    margin-top: 12vw;
+    font-weight: 900;
+    font-size: 12vw;
+}
+.desktop{
+    display: none;
+}
+.mobile{
+    display: block;
+}
+.main-img{
+    width: 45vw;
+    height: 45vw;
+    border-radius: 15px;
+    background-position: center;
+    background-size: 107%;
+    box-shadow: 3px 3px 35px rgba(0, 0, 0, 0.394);
+    position: absolute;
+    background-repeat: no-repeat;
+}
+#red-img{
+    background-image: url("../images/mainimg1.png");
+    top: 16vh;
+    left: 11vw;
+}
+#colorful-img{
+    background-image: url("../images/mainimg2.png");
+    top: 30vh;
+    left: 42vw;
+}
+.slogan{
+    margin: 53vh 0 0 5vw;
+    font-weight: 800;
+    font-size: 8.5vw;
+}
+.main-description{
+    font-weight: 400;
+    font-size: 3.7vw;
+    width: 80vw;
+    margin: 1vw 0 0 5vw;
+}
+.main-btn{
+    font-family: 'Montserrat', sans-serif;
+    width: 60vw;
+    height: 14vw;
+    border-radius: 20px;
+    margin: 10vw 0 0 5vw;
+    border: none;
+    box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.296);
+    font-size: 3.5vw;
+}
+.about-container{
+    width: 85vw;
+    height: 80vw;
+    border: solid black 5px;
+    border-radius: 8px;
+    margin-left: 5vw;
+    margin-top: 30vw;
+}
+.vl {
+    border-left: 5px solid rgb(0, 0, 0);
+    height: 10vw;
+    margin-left: 8vw;
+}
+.about-header{
+    margin-left: 7.5vw;
+    font-weight: 800;
+    font-size: 8.5vw;
+}
+.about-description{
+    width: 45vw;
+    font-weight: 400;
+    font-size: 3.5vw;
+    margin: 4vw 0 0 7.5vw;
+}
+.collection-btn{
+    width: 100%;
+    border: none;
+    height: 10vw;
+    text-align: left;
+    padding-left: 10%;
+    margin-top: 12vw;
+    font-weight: 400;
+}
+.iphone-mockup{
+    width: 39vw;
+    height: 75vw;
+    position: absolute;
+    margin: -55vw 0 0 54vw;
+    background-image: url("../images/oneiphone.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hl{
+    margin: 40vw 0 0 0vw;
+    border-bottom: 5px solid rgb(0, 0, 0);
+    width: 5vw;
+}
+.benefits-header{
+    margin: -5.5vw 0 0 7vw;
+    font-weight: 800;
+    font-size: 8.5vw;
+}
+.benefits{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.benefit{
+    margin-top: 15vw;
+    width: 55vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.benefit-illustration{
+    width: 25vw;
+    height: 25vw;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.benefit-description{
+    margin-top: 5vw;
+    font-size: 3.5vw;
+    font-weight: 500;
+}
+#picture-illustration{
+    background-image: url("../images/picture.png");
+}
+#tokens-illustration{
+    background-image: url("../images/tokens.png");
+}
+#metaverse-illustration{
+    background-image: url("../images/metaverse.png");
+}
+.cta-btn-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vw;
+    margin-bottom: 20vw;
+    height: 100vw;
+}
+.cta-btn{
+    padding: 5vw;
+    width: 70vw;
+    height: 60vw;
+    border-radius: 25px;
+    border: none;
+    font-size: 7.7vw;
+    box-shadow: 4px 8px 34px rgba(0, 0, 0, 0.47);
+    transition: all 0.7s ease;
+}
+.cta-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 8px 34px rgba(0, 0, 0, 0.67);
+}
+@media screen and (min-width: 1200px) {
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+    .main-img{
+        width: 23vw;
+        height: 23vw;
+    }
+    .page-header{
+        text-align: left;
+        margin-top: -2.7vw;
+        font-size: 4vw;
+        margin-left: 8vw;
+    }
+    #red-img{
+        top: 18vh;
+        left: 50vw;
+    }
+    #colorful-img{
+        top: 42vh;
+        left: 67vw;
+    }
+    #main-vl{
+        position: absolute;
+        margin-left: 2.5vw;
+        height: 34vh;
+        border: 2px solid black;
+    }
+    .slogan{
+        margin: 35vh 0 0 2.5vw;
+        font-size: 4.5vw;
+    }
+    .main-description{
+        font-size: 1.8vw;
+        width: 40vw;
+        margin: 1vw 0 0 2.5vw;
+    }
+    .main-btn{
+        width: 30vw;
+        height: 6vw;
+        border-radius: 20px;
+        margin: 5vh 0 0 2.5vw;
+        font-size: 1.8vw;
+    }
+    .about-container{
+        width: 70vw;
+        height: 35vw;
+        margin-left: 12vw;
+        margin-top: 30vh;
+    }
+    .vl {
+        border-left: 5px solid rgb(0, 0, 0);
+        height: 5vw;
+        margin-left: 8vw;
+    }
+    .about-header{
+        font-size: 4.5vw;
+    }
+    .about-description{
+        font-size: 1.8vw;
+        margin: 1vw 0 0 7.5vw;
+    }
+    .collection-btn{
+        height: 5vw;
+        margin-top: 4.5vw;
+        font-size: 1.5vw;
+    }
+    .iphone-mockup{
+        width: 24vw;
+        height: 38vw;
+        position: absolute;
+        margin: -31vw 0 0 55vw;
+    }
+    .hl{
+        margin: 17vw 0 0 0vw;
+    }
+    .page-hl{
+        margin-top: 4vw;
+    }
+    .benefits-header{
+        margin: -3vw 0 0 7vw;
+        font-size: 4.5vw;
+    }
+    .benefits{
+        flex-wrap: nowrap;
+    }
+    .benefit{
+        margin-top: 5vw;
+        width: 20vw;
+        margin: 5vw 5vw 0 5vw;
+    }
+    .benefit-illustration{
+        width: 10vw;
+        height: 10vw;
+    }
+    .benefit-description{
+        margin-top: 3vw;
+        font-size: 1.5vw;
+    }
+    .cta-btn-container{
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+        height: 40vw;
+    }
+    .cta-btn{
+        padding: 3vw;
+        width: 55vw;
+        height: 25vw;
+        font-size: 4.5vw;
+        cursor: pointer;
+    }
+    .cta-btn:hover{
+        transform: scale(1.1);
+        box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.8);
+    }
+}
