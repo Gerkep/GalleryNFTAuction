@@ -72,7 +72,7 @@
                 <configuration>
 					<nodeVersion>v16.13.1</nodeVersion>
                     <npmVersion>8.1.2</npmVersion>
-                 	<workingDirectory>${frontend-src-dir}</workingDirectory>
+                 	<workingDirectory>${project.basedir}/src/main/frontend</workingDirectory>
 					<installDirectory>${project.build.directory}</installDirectory>
                 </configuration>
                 <executions>
