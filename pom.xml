@@ -119,7 +119,7 @@
 							<outputDirectory>${project.build.outputDirectory}/static</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${project.basedir}/src/main/frontend/build</directory>
+									<directory>${frontend-src-dir}/build</directory>
 									<filtering>false</filtering>
 								</resource>
 							</resources>
