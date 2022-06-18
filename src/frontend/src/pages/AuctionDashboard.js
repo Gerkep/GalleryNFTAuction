@@ -9,6 +9,7 @@ import { ethers } from "ethers";
 import "../style/dashboard.css";
 
 class AuctionDashboard extends React.Component {
+    state = ({startPending: false})
     renderError = ({error, touched}) => {
         if (touched && error){
             return (
@@ -29,10 +30,12 @@ class AuctionDashboard extends React.Component {
     }
 
     onSubmit = async (formValues) => {
+        this.setState({startPending: true});
         await provider.send("eth_requestAccounts", []);
         const signer = provider.getSigner();
         const auctionWithSigner = AuctionContract.connect(signer);
-        await auctionWithSigner.start(formValues.StartTime, formValues.EndTime, ethers.utils.parseEther(formValues.InitialPrice));
+        const tx = await auctionWithSigner.start(formValues.StartTime, formValues.EndTime, ethers.utils.parseEther(formValues.InitialPrice));
+        await tx.wait();
         const artwork = {
             "title": formValues.ArtworkTitle,
             "artist": formValues.Author,
@@ -52,6 +55,7 @@ class AuctionDashboard extends React.Component {
         await api.delete("/auction/delete");
        await api.post("/artwork/add", artwork);
        await api.post("/auction/add", auction);
+       this.setState({startPending: false});
        history.push("/auction");
     }
 
@@ -91,9 +95,7 @@ class AuctionDashboard extends React.Component {
                             <Field name="StartTime" component={this.renderTextField}/>
                             <Field name="EndTime" component={this.renderTextField}/>
                             <Field name="InitialPrice" component={this.renderTextField}/>
-                        <button className="submit-btn button">ADD</button><br/>
-
-                    <br/>
+                            {this.state.startPending ? <button className="submit-btn button">PENDING...</button> : <button className="submit-btn button">ADD</button>}
                         </div>
                         <div className="third-column">
                             <button onClick={this.endAuction} className="submit-btn button">END AUCTION</button>

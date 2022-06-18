@@ -4,3 +4,9 @@ export const setHighestBid = (bid) => {
         payload: bid
     };
 };
+export const setTransactionPending = (pending) => { 
+    return {
+        type: 'ON_TRANSACTION_PENDING',
+        payload: pending
+    };
+};

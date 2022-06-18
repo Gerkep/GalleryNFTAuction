@@ -7,7 +7,14 @@ const bidReducer = (initialBid = null, action) => {
    }
    return initialBid;
 }
+const transactionReducer = (pending = null, action) => {
+   if (action.type === 'ON_TRANSACTION_PENDING'){
+       return action.payload;
+   }
+   return pending;
+}
 export default combineReducers({
    form: formReducer,
-   bid: bidReducer
+   bid: bidReducer,
+   transactionPending: transactionReducer
 });

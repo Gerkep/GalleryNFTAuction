@@ -22,7 +22,7 @@ class Modal extends React.Component {
             const signer = provider.getSigner();
             const auctionWithSigner = AuctionContract.connect(signer);
             await auctionWithSigner.bid({ value: ethers.utils.parseEther(this.state.bid)})
-            history.push("/success");
+            history.push("/auction/bid/success");
         }else{
             alert("Please offer more than the last bid")
         }
@@ -31,7 +31,7 @@ class Modal extends React.Component {
         return ReactDOM.createPortal(
             <div onClick={() => history.push("/auction")} className='modal-background'>
                 <div onClick={(e) => e.stopPropagation()} className="bid-modal">
-                    <p className='bid-info'>Use '<b>.</b>' and not comma when <br/> using decimals.</p>
+                    <p className='bid-info'>If you placed a bid earlier without withdrawing it, it will add up!</p>
                     <label className='bid-label'><b>ETH</b></label>
                     <input type="number" placeholder='Value(ETH)' value={this.state.bid} onChange={this.handleChange} className="bid-input"/>
                     <button onClick={this.placeBid} className='button bid-modal-btn'>BID</button>

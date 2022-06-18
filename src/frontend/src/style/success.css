@@ -1,0 +1,22 @@
+.bid-header{
+    font-weight: 900;
+    margin: 35vh 0 0 0;
+    text-align: center;
+}
+.success-link{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0 40vh 0;
+    text-decoration: underline;
+}
+@media screen and (min-width: 1200px) {
+    .bid-header{
+        margin-top: 27vh;
+        font-size: 5vw;
+    }
+    .success-link{
+        font-size: 2vw;
+    }
+  
+}
