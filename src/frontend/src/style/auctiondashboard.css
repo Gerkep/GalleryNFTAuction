@@ -1,0 +1,12 @@
+@media screen and (min-width: 1200px) {
+    .auction-forms {
+        display: grid; 
+        grid-template-columns: 60vw 20vw; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "auction-form third-column"; 
+      }
+      .auction-form { grid-area: auction-form; }
+      .third-column{ grid-area: third-column; margin-top: 3vw; margin-left: 10vw;}
+}

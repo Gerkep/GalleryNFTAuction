@@ -12,19 +12,23 @@ import ReactPlayer from 'react-player'
 import Countdown from "../components/Countdown";
 
 class AuctionPage extends React.Component {
-    state = ({auctions: [], highestBid: '', startTimeState: 0, endTimeState: 0})
+    state = ({auctions: [], highestBid: '', startTimeState: 0, endTimeState: 0, withdrawalPending: false})
     componentDidMount = async () => {
-        const auctions = await api.get("/auction/list").then((result) => result.data)
-        await provider.send("eth_requestAccounts", []);
-        const auctionWithProvider = AuctionContract.connect(provider);
-        const highestBid = await auctionWithProvider.getHighestBid();
-        const startTime = await auctionWithProvider.getStartTime();
-        const endTime = await auctionWithProvider.getEndTime();
-        const startTimeAsNumber = startTime.toNumber()* 1000;
-        const endTimeAsNumber = endTime.toNumber()* 1000;
-        const highestBidInETH = ethers.utils.formatEther(highestBid);
-        const highestBidAsNumber = highestBidInETH.toString();
-        this.setState({auctions: auctions, highestBid: highestBidAsNumber, startTimeState: startTimeAsNumber, endTimeState: endTimeAsNumber, deposit: '', depositShowed: false});
+        try{
+            const auctions = await api.get("/auction/list").then((result) => result.data)
+            await provider.send("eth_requestAccounts", []);
+            const auctionWithProvider = AuctionContract.connect(provider);
+            const highestBid = await auctionWithProvider.getHighestBid();
+            const startTime = await auctionWithProvider.getStartTime();
+            const endTime = await auctionWithProvider.getEndTime();
+            const startTimeAsNumber = startTime.toNumber()* 1000;
+            const endTimeAsNumber = endTime.toNumber()* 1000;
+            const highestBidInETH = ethers.utils.formatEther(highestBid);
+            const highestBidAsNumber = highestBidInETH.toString();
+            this.setState({auctions: auctions, highestBid: highestBidAsNumber, startTimeState: startTimeAsNumber, endTimeState: endTimeAsNumber, deposit: '', depositShowed: false});
+        }catch(e){
+            alert("Ooops! Your browser can't handle web3 or you don't have a Metamask account. Try Google Chrome with Metamask extension set up!")
+        }
 
         //opacity from 0 to 1 observer
         const appearing = document.querySelectorAll('.appearing');
@@ -42,10 +46,19 @@ class AuctionPage extends React.Component {
         appearing.forEach(appear => observer.observe(appear));
     }
     withdraw = async () => {
+        this.setState({withdrawalPending: true});
         await provider.send("eth_requestAccounts", []);
         const signer = provider.getSigner();
         const auctionWithSigner = AuctionContract.connect(signer);
-        await auctionWithSigner.withdraw();
+        try{
+            const tx = await auctionWithSigner.withdraw();
+            await tx.wait();
+            this.setState({withdrawalPending: false});
+            alert("Withdrawal successful.")
+        }catch(e){
+            this.setState({withdrawalPending: false});
+            alert("Something went wrong. Try again or contact us to resolve this issue.")
+        }
     }
     showDeposit = async () => {
         await provider.send("eth_requestAccounts", []);
@@ -64,7 +77,7 @@ class AuctionPage extends React.Component {
                 <div className="auction-content">
                     <div className="auction-header">
                         <div className="hl page-hl desktop"></div>
-                        <h1 className="page-header">LIVE!</h1>
+                        {currentTime < this.state.startTimeState ? <h1 className="page-header">SOON!</h1> : <h1 className="page-header">LIVE!</h1>}
                         <div className="countdown-container appearing">
                             <p className="countdown">
                                 <div className="desktop countdown-text">

@@ -105,7 +105,8 @@
     align-items: flex-end;
 }
 @media screen and (min-width: 1200px) {
-    .auction-content {  display: grid;
+    .auction-content {  
+        display: grid;
         grid-template-columns: 33vw 38vw 33vw;
         grid-template-rows: 1fr;
         gap: 0px 0px;

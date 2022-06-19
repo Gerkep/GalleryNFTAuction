@@ -32,11 +32,11 @@ contract VictorGalleryAuction is ERC721, Ownable {
     return string(abi.encodePacked(base, tokenId.toString(), ".json"));
   }
 
-  function start(uint256 start, uint256 end, uint256 basePrice) public onlyOwner{
+  function start(uint256 startAuction, uint256 endAuction, uint256 basePrice) public onlyOwner{
     require(paused, "Already running");
     paused = false;
-    startTime = start;
-    endTime = end;
+    startTime = startAuction;
+    endTime = endAuction;
     highestOffer = basePrice;
   }
 
@@ -44,7 +44,7 @@ contract VictorGalleryAuction is ERC721, Ownable {
       require(!paused, "Auction paused");
       require(block.timestamp > startTime, "Wait till the auction starts");
       require(block.timestamp < endTime, "Auction is over");
-      require(msg.value > highestOffer, "You have to offer more");
+      require(msg.value + bids[msg.sender] > highestOffer, "You have to offer more");
       highestOffer = msg.value + bids[msg.sender];
       highestBidder = msg.sender;
       bids[msg.sender] += msg.value;
