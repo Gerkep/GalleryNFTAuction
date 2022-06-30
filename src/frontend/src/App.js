@@ -25,6 +25,7 @@ import "./style/main.css"
                         <Route path="/dashboard" exact component={Dashboard} />
                         <Route path="/dashboard/auction" exact component={AuctionDashboard} />
                         <Route path="/dashboard/collection" exact component={CollectionDashboard} />
+                        <Route path="/error" component={ErrorPage} />
                         <Route path="*" component={ErrorPage} />
                     </Switch>
             </Router>

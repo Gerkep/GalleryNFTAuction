@@ -151,6 +151,24 @@ const validate = (formValues) => {
     if(!(formValues.ArtworkTitle)){
         errors.ArtworkTitle = 'Enter artwork title'
     }
+    if(!(formValues.Author)){
+        errors.Author = 'Enter artist(or unknown)'
+    }
+    if(!(formValues.ImageURI)){
+        errors.ImageURI = 'Enter URI(you can find it in pinata)'
+    }
+    if(!(formValues.Description)){
+        errors.Description = 'Enter some description'
+    }
+    if(!(formValues.StartTime)){
+        errors.StartTime = 'Enter start time(in epoch timestamp)'
+    }
+    if(!(formValues.EndTime)){
+        errors.EndTime = 'Enter end time(in epoch timestamp)'
+    }
+    if(!(formValues.InitialPrice)){
+        errors.InitialPrice = 'Enter initial price(In ETH)'
+    }
     return errors;
 }
 

@@ -9,4 +9,12 @@
       }
       .auction-form { grid-area: auction-form; }
       .third-column{ grid-area: third-column; margin-top: 3vw; margin-left: 10vw;}
+      .error-text{
+          color: rgb(255, 8, 8);
+          margin-left: 0.5vw;
+      }
+      .field-error{
+          border: 2px red solid;
+          margin-top: 0.4vh;
+      }
 }

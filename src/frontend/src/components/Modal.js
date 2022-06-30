@@ -47,7 +47,7 @@ class Modal extends React.Component {
         return ReactDOM.createPortal(
             <div onClick={() => history.push("/auction")} className='modal-background'>
                 <div onClick={(e) => e.stopPropagation()} className="bid-modal">
-                    <p className='bid-info'>If you placed a bid earlier without withdrawing it, it will add up!</p>
+                    <p className='bid-info'>If you placed a bid earlier without withdrawing it, <b>it will add up!</b></p>
                     <label className='bid-label'><b>ETH</b></label>
                     <input type="number" placeholder='Value(ETH)' value={this.state.bid} onChange={this.handleChange} className="bid-input"/>
                     {this.state.bidPending ?  <button className="button bid-modal-btn"><div className="loader">Loading...</div></button> : <button onClick={this.placeBid} className='button bid-modal-btn'>BID</button>}

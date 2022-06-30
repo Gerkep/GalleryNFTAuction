@@ -80,8 +80,9 @@
     text-align: left;
     width: 70vw;
     padding: 5vw;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(235, 235, 235);
     margin: 15vw 0 20vw 0;
+    border-radius: 5px;
 }
 .deposit{
     display: flex;
