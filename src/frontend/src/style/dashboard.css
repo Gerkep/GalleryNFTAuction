@@ -12,12 +12,29 @@
 }
 .dashboard-choice{
     width: 80vw;
-    height: 15vw;
+    height: 25vw;
     margin: 5vw 10vw 5vw 10vw;
-    border-radius: 15%;
+    border-radius: 20px;
 }
 .text-field{
     border-radius: 16px;
+}
+.text-field{
+    border-radius: 16px;
+    width: 80vw;
+    margin: 3vw 0 3vw 7.5vw;
+    height: 7vh;
+    font-size: 5vw;
+    padding-left: 5vw;
+}
+.submit-btn{
+    width: 70vw;
+    height: 10vh;
+    border-radius: 15px;
+    margin: 4vh 0 2vh 15vw ;
+}
+#delete-field{
+    margin-top: 12vh;
 }
 @media screen and (min-width: 1200px) {
     .dashboard-container{
@@ -61,6 +78,9 @@
         padding-left: 1vw;
         font-size: 1.5vw;
         margin: 1vw 0 1vw 0;
+    }
+    #delete-field{
+        margin-top: 1vw;
     }
     .submit-btn{
         width: 17vw;

@@ -1,0 +1,39 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.login-google{
+    margin-top: 40vh;
+    padding: 6vh 8vw 6vh 8vw;
+    font-size: 3vw;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+.login-google:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.579);
+}
+.logout-btn{
+    position: absolute;
+    padding: 3vh 4vw 3vh 4vw;
+    border-radius: 20px;
+    right: 4vw;
+    top: 15vh;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 1200px) {
+    .login-google{
+        padding: 6vh 18vw 6vh 18vw;
+        font-size: 5vw;
+    }
+    .logout-btn{
+        position: inherit;
+        width: 80vw;
+        border-radius: 20px;
+        font-size: 5vw;
+        margin-top: 15vh;
+    }
+}

@@ -30,7 +30,7 @@ class MainPage extends React.Component {
                 <div className="vl desktop appearing" id="main-vl"></div>
                 <h1 className="slogan appearing">One Art,<br/>Different People.</h1>
                 <h3 className="main-description appearing">Combining conventional, physical art<br></br> with the latest technology advancements. </h3>
-                <Link to="/auction"><button className="button main-btn appearing">CHECK LIVE AUCTION!</button></Link>
+                <Link to="/auction"><button className="button main-btn appearing">VIEW LIVE AUCTION!</button></Link>
                 <div className="about-container">
                     <div className="vl"></div>
                     <h2 className="about-header mobile appearing">Living Art.</h2>

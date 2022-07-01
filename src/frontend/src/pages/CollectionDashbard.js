@@ -66,7 +66,7 @@ class CollectionDashboard extends React.Component {
                         </div>
                         <div className="form-second-column">
                             <form onSubmit={this.deleteFromCollection}>
-                                <input type="number" className="text-field" placeholder="ArtworkId" value={this.state.id} onChange={this.handleChange}></input>
+                                <input type="number" className="text-field" id="delete-field" placeholder="ArtworkId" value={this.state.id} onChange={this.handleChange}></input>
                                 <input type="submit" className="submit-btn button" value="DELETE"></input>
                             </form>
                         </div>
