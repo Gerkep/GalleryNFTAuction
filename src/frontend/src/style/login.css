@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 }
 .login-google{
-    margin-top: 40vh;
+    margin-top: 30vh;
     padding: 6vh 8vw 6vh 8vw;
     font-size: 3vw;
     border-radius: 30px;
@@ -17,9 +17,9 @@
 }
 .logout-btn{
     position: absolute;
-    padding: 3vh 4vw 3vh 4vw;
+    padding: 2vh 4vw 2vh 4vw;
     border-radius: 20px;
-    right: 4vw;
+    right: 4.5vw;
     top: 15vh;
     font-size: 1.5vw;
 }

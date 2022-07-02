@@ -12,8 +12,6 @@ import SuccessPage from "./pages/SuccessPage";
 import ErrorPage from "./pages/ErrorPage";
 import "./style/main.css"
 import LoginPage from "./pages/LoginPage";
-import Register from "./pages/Register";
-import ResetPassword from "./pages/ResetPassword";
 
 
  const App = () => {
@@ -29,8 +27,6 @@ import ResetPassword from "./pages/ResetPassword";
                         <Route path="/dashboard/auction" exact component={AuctionDashboard} />
                         <Route path="/dashboard/collection" exact component={CollectionDashboard} />
                         <Route path="/login" component={LoginPage} />
-                        <Route path="/register" component={Register} />
-                        <Route path="/reset" component={ResetPassword} />
                         <Route path="*" component={ErrorPage} />
                     </Switch>
             </Router>
