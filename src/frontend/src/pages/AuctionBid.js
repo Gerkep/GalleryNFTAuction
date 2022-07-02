@@ -15,8 +15,6 @@ class AuctionBid extends React.Component {
         this.setState({auctions: auctions});
     }
     renderAuction = () => {
-        const auction = this.state.auctions.map((auction) => {
-            console.log("Auction" + this.props.bid)
             return(
                 <div className="auction-content">
                     <div className="auction-header">
@@ -27,7 +25,7 @@ class AuctionBid extends React.Component {
                         </div>
                     </div>
                     <div className="painting-container">
-                        <div className="auction-image"></div>
+                        <div className="auction-image" id="fake-image"></div>
                         <h2 className="painting-name">dfgae</h2>
                         <h3 className="artist">wrgaer</h3>
                         <div className="bid-container">
@@ -41,10 +39,6 @@ class AuctionBid extends React.Component {
                     </div>
                 </div>
             )
-        });
-        return (
-            <div>{auction}</div>
-        );
     }
     render(){
         return(

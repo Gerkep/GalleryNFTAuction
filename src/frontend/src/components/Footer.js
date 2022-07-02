@@ -10,18 +10,18 @@ const Footer = () => {
             <div className="footer-section" id="customer-service-section">
                 <h4 className="footer-section-header">Customer Service</h4>
                 <div className="footer-links">
-                    <a href="" className="footer-link">Returns</a>
-                    <a href="" className="footer-link">Privacy Policy</a>
-                    <a href="" className="footer-link">Terms & Conditions</a>
-                    <a href="" className="footer-link">Suppliers</a>
+                    <a href="https://www.victorgallery.pl/static/docs/returns.1fe466ecae07.pdf" className="footer-link">Returns</a>
+                    <a href="https://www.victorgallery.pl/static/docs/privacy.39fe4d89656b.pdf" className="footer-link">Privacy Policy</a>
+                    <a href="https://www.victorgallery.pl/static/docs/terms.0f6bf7412160.pdf" className="footer-link">Terms & Conditions</a>
+                    <a href="https://www.victorgallery.pl/static/docs/suppliers.2133eaaff4db.pdf" className="footer-link">Suppliers</a>
                 </div>
             </div>
             <div className="footer-section" id="connect-section">
                 <h4 className="footer-section-header">Connect With Us</h4>
                 <div className="footer-links">
-                    <a href="" className="footer-link">Contact Form</a>
+                    <a href="https://www.victorgallery.pl/en/contact" className="footer-link">Contact Form</a>
                     <a href="" className="footer-link">Twitter</a>
-                    <a href="" className="footer-link">Instagram</a>
+                    <a href="https://www.instagram.com/victor_oneart/" className="footer-link">Instagram</a>
                 </div>
             </div>
             <div className="contact">
