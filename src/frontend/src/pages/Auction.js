@@ -92,16 +92,22 @@ class AuctionPage extends React.Component {
                                     {currentTime < this.state.startTimeState ? <div>Starts in: <Countdown targetDate={this.state.startTimeState}/></div> : <div>Ends in: <Countdown targetDate={this.state.endTimeState}/></div>}
                                 </div></p>
                         </div>
+                        <div className="withdraw-container desktop">
+                            <div className="withdraw-info"><p className="withdraw-header">Your Deposit: {this.state.deposit}</p>{this.state.depositShowed ? '' : <button onClick={this.showDeposit} className="show-deposit"></button>}</div>
+                            <button onClick={this.withdraw} className="button withdraw-btn">WITHDRAW</button>
+                            <p className="withdraw-note">If you withdraw your bid <b>you won't win this auction.</b></p>
+                        </div>
                     </div>
                     <div className="painting-container">
                         <ReactPlayer className="auction-image appearing" playing={true} loop={true} url={auction.imageURL} />
                         <h2 className="painting-name appearing">{auction.title}</h2>
                         <h3 className="artist appearing">{auction.artist}</h3>
                         {currentTime < this.state.startTimeState ? 
+                            '' :
                             <div className="bid-container">
                                 <p className="last-bid">Highest bid: {this.state.highestBid}Ξ</p>
                                 <Link to="/auction/bid" onClick={this.placeBid}><button className="bid-btn button"><div className="offer-img"></div>MAKE OFFER</button></Link>
-                            </div> : ''
+                            </div>
                         }
                     </div>
                     <div className="withdraw-container mobile">
@@ -112,11 +118,6 @@ class AuctionPage extends React.Component {
                     <div className="painting-about appearing">
                         <h3 className="painting-about-header">ABOUT PAINTING</h3>
                         <p className="painting-about-text">{auction.description}</p>
-                    </div>
-                    <div className="withdraw-container desktop">
-                            <div className="withdraw-info"><p className="withdraw-header">Your Deposit: {this.state.deposit}</p>{this.state.depositShowed ? '' : <button onClick={this.showDeposit} className="show-deposit"></button>}</div>
-                            <button onClick={this.withdraw} className="button withdraw-btn">WITHDRAW</button>
-                            <p className="withdraw-note">If you withdraw your bid <b>you won't win this auction.</b></p>
                     </div>
                 </div>
             )

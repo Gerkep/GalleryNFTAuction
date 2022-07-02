@@ -193,9 +193,9 @@
     }
     .withdraw-container{
         width: 29vw;
-        position: absolute;
-        top: 34vw;
-        left: 2vw;
+        position: inherit;
+        margin-top: 28.2vh;
+        margin-left: 5vw;
     }
     .withdraw-btn{
         width: 20vw;
