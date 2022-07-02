@@ -8,6 +8,8 @@ import { AuctionContract, provider } from "../ethereum/Contracts";
 import { auth, db, logout } from "../firebase/firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { connect } from "react-redux";
+import { setUser } from "../actions";
 import { ethers } from "ethers";
 import "../style/collection.css";
 import { Link } from "react-router-dom";
@@ -41,6 +43,8 @@ const Dashboard = (props) => {
         if(user?.email != "gerke.contact@gmail.com"){
             history.push("/error")
         }else{
+            const email = user?.email;
+            props.setUser(email);
             return(
                 <div>
                     <div className="hl page-hl desktop"></div>
@@ -65,4 +69,4 @@ const Dashboard = (props) => {
         )
 }
 
-export default Dashboard;
+export default connect(null, {setUser})(Dashboard);

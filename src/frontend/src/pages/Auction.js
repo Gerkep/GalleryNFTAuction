@@ -5,7 +5,7 @@ import api from "../api";
 import "../style/auction.css"
 import { AuctionContract, provider } from "../ethereum/Contracts";
 import { ethers } from "ethers";
-import { setHighestBid } from "../actions";
+import { setHighestBid, setDeposit } from "../actions";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import ReactPlayer from 'react-player'
@@ -69,6 +69,14 @@ class AuctionPage extends React.Component {
         const depositString = depositInEth.toString() + "Ξ";
         this.setState({deposit: depositString, depositShowed: true})
     }
+    placeBid = async () => {
+        await provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+        const auctionWithSigner = AuctionContract.connect(signer);
+        const deposit = await auctionWithSigner.getDeposit();
+        const depositInEth = ethers.utils.formatEther(deposit);
+        this.props.setDeposit(depositInEth);
+    }
     renderAuction = () => {
         const currentTime = Date.now();
         this.props.setHighestBid(this.state.highestBid);
@@ -89,10 +97,12 @@ class AuctionPage extends React.Component {
                         <ReactPlayer className="auction-image appearing" playing={true} loop={true} url={auction.imageURL} />
                         <h2 className="painting-name appearing">{auction.title}</h2>
                         <h3 className="artist appearing">{auction.artist}</h3>
-                        <div className="bid-container">
-                            <p className="last-bid">Highest bid: {this.state.highestBid}Ξ</p>
-                            <Link to="/auction/bid"><button className="bid-btn button"><div className="offer-img"></div>MAKE OFFER</button></Link>
-                        </div>
+                        {currentTime < this.state.startTimeState ? 
+                            <div className="bid-container">
+                                <p className="last-bid">Highest bid: {this.state.highestBid}Ξ</p>
+                                <Link to="/auction/bid" onClick={this.placeBid}><button className="bid-btn button"><div className="offer-img"></div>MAKE OFFER</button></Link>
+                            </div> : ''
+                        }
                     </div>
                     <div className="withdraw-container mobile">
                             <div className="withdraw-info"><p className="withdraw-header">Your Deposit: {this.state.deposit}</p>{this.state.depositShowed ? '' : <button onClick={this.showDeposit} className="show-deposit"></button>}</div>
@@ -127,4 +137,4 @@ class AuctionPage extends React.Component {
 
 }
 
-export default connect(null, {setHighestBid})(AuctionPage);
+export default connect(null, {setHighestBid, setDeposit})(AuctionPage);

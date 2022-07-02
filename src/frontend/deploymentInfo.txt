@@ -1,1 +1,1 @@
-Auction smart contract: 0x6cE91A326E53262B891c56eB59C594662ed9710a
+Auction smart contract: 0xaaEa5e6A1356d488FCbCd0fF96F50677c8ad5c65

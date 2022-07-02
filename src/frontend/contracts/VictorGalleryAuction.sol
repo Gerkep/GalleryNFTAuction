@@ -60,6 +60,7 @@ contract VictorGalleryAuction is ERC721, Ownable {
       _tokenIds.increment();
       _mint(highestBidder, _tokenIds.current());
       bids[highestBidder] = 0;
+      payable(msg.sender).transfer(highestOffer);
     }
     paused = true;
     delete highestBidder;

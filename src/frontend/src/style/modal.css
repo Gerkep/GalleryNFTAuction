@@ -14,13 +14,13 @@
     margin-bottom: -4vw;
 }
 .bid-modal{
-    height: 60vw;
-    width: 78vw;
+    height: 65vw;
+    width: 80vw;
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
     margin-top: 35vh;
     border-radius: 15px;
-    box-shadow: 10px 10px 40px black;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.424);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -46,14 +46,18 @@
     text-align: center;
     font-size: 4vw;
 }
+.bid-total{
+    width: 100%;
+    margin: 0 0 -1vh 10vw;
+}
 @media screen and (min-width: 1200px) {
     
     .bid-modal{
-        height: 24vw;
-        width: 50vw;
+        height: 28vw;
+        width: 45vw;
         background-color: rgb(255, 255, 255);
         margin: 0 auto;
-        margin-top: 27vh;
+        margin-top: 20vh;
         border-radius: 15px;
         box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.443);
         padding: 3vw;
@@ -63,7 +67,7 @@
         height: 4vw;
         margin: 0 20% 0 20%;
         padding-left: 1vw;
-        font-size: 3vw;
+        font-size: 2.5vw;
         border-radius: 15px;
     }
     .bid-modal-btn{
@@ -74,11 +78,17 @@
     .bid-info{
         text-align: center;
         font-size: 2vw;
-        width: 50vw;
+        width: 40vw;
     }
     .bid-label{
         text-align: left;
         width: 17vw;
-        margin-bottom: -2vw;
+        margin-bottom: -2.5vw;
+        font-size: 1.2vw;
+    }
+    .bid-total{
+        width: 100%;
+        margin: 0 0 -2vw 8vw;
+        font-size: 1.2vw;
     }
 }

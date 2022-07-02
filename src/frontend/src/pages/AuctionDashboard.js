@@ -5,12 +5,18 @@ import history from "../history";
 import api from "../api";
 import { Field, reduxForm } from 'redux-form';
 import { AuctionContract, provider } from "../ethereum/Contracts";
+import { auth, db, logout } from "../firebase/firebase";
+import { query, collection, getDocs, where } from "firebase/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { connect } from "react-redux";
 import { ethers } from "ethers";
 import "../style/dashboard.css";
 import "../style/auctiondashboard.css"
 
 class AuctionDashboard extends React.Component {
+
     state = ({startPending: false, endPending: false, pausePending: false, unpausePending: false})
+    
     renderError = ({error, touched}) => {
         if (touched && error){
             return (
@@ -60,7 +66,7 @@ class AuctionDashboard extends React.Component {
             await api.post("/auction/add", auction);
             history.push("/auction");
         }catch (e) {
-            alert("Can't start auction. Check if previous auction is finished or paused.")
+            alert("Can't start auction. Check if previous auction is finished/paused and you are using owner's metamask.")
         }
 
        this.setState({startPending: false});
@@ -80,7 +86,7 @@ class AuctionDashboard extends React.Component {
            alert("Auction ended successfully.")
         }catch (e){
             this.setState({endPending: false})
-            alert("Something went wrong. Check if the auction has ended.")
+            alert("Something went wrong. Check if the auction has ended and you are using owner's metamask.")
         }
     }
     pauseAuction = async () => {
@@ -93,7 +99,7 @@ class AuctionDashboard extends React.Component {
             await tx.wait();
             alert("Auction paused.")
         }catch(e){
-            alert("Can't pause auction. Check if it's running.")
+            alert("Can't pause auction. Check if it's runningand you are using owner's metamask.")
         }
         
         this.setState({pausePending: false})
@@ -107,10 +113,39 @@ class AuctionDashboard extends React.Component {
             const tx = await auctionWithSigner.setPause(false);
             await tx.wait();
         }catch(e){
-            alert("Can't unpause auction. Check if it's running.")
+            alert("Can't unpause auction. Check if it's running and you are using owner's metamask.")
         }
         alert("Auction unpaused.")
         this.setState({unpausePending: false})
+    }
+    renderForm = () => {
+        if(this.props.user != "gerke.contact@gmail.com"){
+            history.push("/error")
+        }else{
+            return(
+                <div className="auction-forms">
+                    <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="auction-form">
+                        <div className="form-first-column">
+                            <Field name="ArtworkTitle" component={this.renderTextField}/>
+                            <Field name="Author" component={this.renderTextField}/>
+                            <Field name="ImageURI" component={this.renderTextField}/>
+                            <Field name="Description" component={this.renderTextField}/>
+                        </div>
+                        <div className="form-second-column">
+                            <Field name="StartTime" component={this.renderTextField}/>
+                            <Field name="EndTime" component={this.renderTextField}/>
+                            <Field name="InitialPrice" component={this.renderTextField}/>
+                            {this.state.startPending ? <button className="submit-btn button"><div className="loader">Loading...</div></button> : <button className="submit-btn button">ADD</button>}
+                        </div>
+                    </form>
+                    <div className="third-column">
+                        {this.state.endPending ? <button className="submit-btn button"><div className="loader">Loading...</div></button> : <button onClick={this.endAuction} className="submit-btn button">END AUCTION</button>}
+                        {this.state.pausePending ? <button className="submit-btn button"><div className="loader">Loading...</div></button> : <button onClick={this.pauseAuction} className="submit-btn button">PAUSE</button>}
+                        {this.state.unpausePending ? <button className="submit-btn button"><div className="loader">Loading...</div></button> : <button onClick={this.unpauseAuction} className="submit-btn button">UNPAUSE</button>}
+                    </div>
+                </div>
+            )
+        }
     }
     render(){
         return (
@@ -118,30 +153,7 @@ class AuctionDashboard extends React.Component {
                 <Navbar/>
                     <div className="hl page-hl desktop"></div>
                     <h1 className="page-header">AUCITON DASHBOARD</h1>
-                    <div className="auction-forms">
-                        <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="auction-form">
-                            <div className="form-first-column">
-                                <Field name="ArtworkTitle" component={this.renderTextField}/>
-                                <Field name="Author" component={this.renderTextField}/>
-                                <Field name="ImageURI" component={this.renderTextField}/>
-                                <Field name="Description" component={this.renderTextField}/>
-                            </div>
-                            <div className="form-second-column">
-                                <Field name="StartTime" component={this.renderTextField}/>
-                                <Field name="EndTime" component={this.renderTextField}/>
-                                <Field name="InitialPrice" component={this.renderTextField}/>
-                                {this.state.startPending ? <button className="submit-btn button"><div className="loader">Loading...</div></button> : <button className="submit-btn button">ADD</button>}
-                            </div>
-                        </form>
-                        <div className="third-column">
-                            {this.state.endPending ? <button className="submit-btn button"><div className="loader">Loading...</div></button> : <button onClick={this.endAuction} className="submit-btn button">END AUCTION</button>}
-                            {this.state.pausePending ? <button className="submit-btn button"><div className="loader">Loading...</div></button> : <button onClick={this.pauseAuction} className="submit-btn button">PAUSE</button>}
-                            {this.state.unpausePending ? <button className="submit-btn button"><div className="loader">Loading...</div></button> : <button onClick={this.unpauseAuction} className="submit-btn button">UNPAUSE</button>}
-                        </div>
-                    </div>
-
-                    
-
+                    {this.renderForm()}
             </div>
         )
     }
@@ -171,10 +183,12 @@ const validate = (formValues) => {
     }
     return errors;
 }
-
+const mapStateToProps = (state) => {
+    return {user: state.user};
+};
 const formWrapped = reduxForm({
     form: 'artwork',
     validate
 })(AuctionDashboard);
 
-export default formWrapped;
+export default connect(mapStateToProps)(formWrapped);

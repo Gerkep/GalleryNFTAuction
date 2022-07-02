@@ -18,7 +18,7 @@ if (window.ethereum) {
     const { ethereum } = window;
     if (ethereum && ethereum.isMetaMask) {
       availableProvider =  (browserName === "Chrome") ? new ethers.providers.Web3Provider(window.ethereum) : ethers.getDefaultProvider();
-      contract =  new ethers.Contract("0x6cE91A326E53262B891c56eB59C594662ed9710a", AuctionABI, availableProvider)
+      contract =  new ethers.Contract("0xaaEa5e6A1356d488FCbCd0fF96F50677c8ad5c65", AuctionABI, availableProvider)
     } else {
       alert('If you want to use full functionality of our website please install metamask extension.');
     }
