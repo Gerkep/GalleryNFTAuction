@@ -2,13 +2,18 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import PageLoader from "../components/PageLoader";
 
 class MainPage extends React.Component {
 
+    state = ({loadingContent: false})
+
+    componentWillMount = () => {
+        this.setState({loadingContent: true})
+    }
     componentDidMount(){
                 //opacity from 0 to 1 observer
                 const appearing = document.querySelectorAll('.appearing');
-
                 //appering animation containers
                 function handleIntersection(entries) {
                     entries.map((entry) => {
@@ -20,11 +25,13 @@ class MainPage extends React.Component {
                   }
                 const observer = new IntersectionObserver(handleIntersection);
                 appearing.forEach(appear => observer.observe(appear));
+                this.setState({loadingContent: false})
     }
     render(){
         return(
             <div>
                 <Navbar />
+                {this.state.loadingContent ? <PageLoader /> : ''}
                 <div className="main-img appearing" id="colorful-img"></div>
                 <div className="main-img appearing" id="red-img"></div>
                 <div className="vl desktop appearing" id="main-vl"></div>
@@ -46,15 +53,15 @@ class MainPage extends React.Component {
                 <div className="benefits">
                     <div className="benefit appearing">
                         <div className="benefit-illustration " id="picture-illustration"></div>
-                        <p className="benefit-description">Physical artwork which you can and on your wall.</p>
+                        <p className="benefit-description">Physical artwork which you can hang on your wall.</p>
                     </div>
                     <div className="benefit appearing">
                         <div className="benefit-illustration" id="tokens-illustration"></div>
-                        <p className="benefit-description">Tokens- buy art, tickets or even book a barber!</p>
+                        <p className="benefit-description">Gift Tokens for which you can buy more art!</p>
                     </div>
                     <div className="benefit appearing">
                         <div className="benefit-illustration" id="metaverse-illustration"></div>
-                        <p className="benefit-description">Your artwork displayed in the metaverse gallery.</p>
+                        <p className="benefit-description">Artwork displayed in the metaverse gallery.</p>
                     </div>
                 </div>
                 <div className="cta-btn-container appearing">

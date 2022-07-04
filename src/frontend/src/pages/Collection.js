@@ -4,10 +4,16 @@ import Footer from "../components/Footer";
 import "../style/collection.css";
 import api from "../api";
 import ReactPlayer from 'react-player'
+import PageLoader from "../components/PageLoader";
 
 class CollectionPage extends React.Component {
 
-    state = ({artworkList: []})
+    state = ({artworkList: [], loadingContent: false})
+
+    componentWillMount = () => {
+        this.setState({loadingContent: true})
+    }
+
     componentDidMount = async () => {
         await api.get("/artwork/list").then((response) =>{
             this.setState({artworkList: response.data})
@@ -30,6 +36,7 @@ class CollectionPage extends React.Component {
             }
         const observer = new IntersectionObserver(handleIntersection);
         appearing.forEach(appear => observer.observe(appear));
+        this.setState({loadingContent: false})
     }
 
     renderArtworks = () => {
@@ -51,6 +58,7 @@ class CollectionPage extends React.Component {
         return(
             <div className="collection-page">
                 <Navbar />
+                {this.state.loadingContent ? <PageLoader /> : ''}
                     <div className="hl page-hl desktop"></div>
                     <h1 className="page-header">COLLECTION</h1>
                         {this.renderArtworks()}

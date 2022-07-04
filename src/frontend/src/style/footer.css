@@ -7,6 +7,7 @@
     justify-content: center;
     color: white;
     margin-top: 3vh;
+    position: absolute;
 }
 .footer-logo-container{
     width: 100%;

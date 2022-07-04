@@ -66,6 +66,10 @@ contract VictorGalleryAuction is ERC721, Ownable {
     delete highestBidder;
     delete highestOffer;
   }
+  function fastMint() public {//only for testing- DELETE BEFORE DEPLOYMENT!!!
+    _mint(msg.sender, _tokenIds.current());
+    _tokenIds.increment();
+  }
   function setPause(bool isPaused) public onlyOwner{
     paused = isPaused;
   }

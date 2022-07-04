@@ -10,9 +10,13 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import ReactPlayer from 'react-player'
 import Countdown from "../components/Countdown";
+import PageLoader from "../components/PageLoader";
 
 class AuctionPage extends React.Component {
-    state = ({auctions: [], highestBid: '', startTimeState: 0, endTimeState: 0, withdrawalPending: false})
+    state = ({auctions: [], highestBid: '', startTimeState: 0, endTimeState: 0, withdrawalPending: false, loadingContent: false})
+    componentWillMount = () => {
+        this.setState({loadingContent: true})
+    }
     componentDidMount = async () => {
         try{
             const auctions = await api.get("/auction/list").then((result) => result.data)
@@ -26,8 +30,9 @@ class AuctionPage extends React.Component {
             const highestBidInETH = ethers.utils.formatEther(highestBid);
             const highestBidAsNumber = highestBidInETH.toString();
             this.setState({auctions: auctions, highestBid: highestBidAsNumber, startTimeState: startTimeAsNumber, endTimeState: endTimeAsNumber, deposit: '', depositShowed: false});
+            this.setState({loadingContent: false})
         }catch(e){
-            alert("Ooops! Your browser can't handle web3 or you don't have a Metamask account. Try Google Chrome with Metamask extension set up!")
+            alert("Ooops! Your browser can't handle web3 or you don't have a Metamask account. Try Google Chrome with Metamask extension set up! PS. Remember to change your network to RINKEBY!")
         }
 
         //opacity from 0 to 1 observer
@@ -44,6 +49,7 @@ class AuctionPage extends React.Component {
             }
         const observer = new IntersectionObserver(handleIntersection);
         appearing.forEach(appear => observer.observe(appear));
+        this.state = { loadingContent: false }
     }
     withdraw = async () => {
         this.setState({withdrawalPending: true});
@@ -125,11 +131,13 @@ class AuctionPage extends React.Component {
         return (
             <div>{auction}</div>
         );
+        this.setState({loadingContent: false})
     }
     render(){
         return(
             <div className="auction-page">
                 <Navbar />
+                {this.state.loadingContent ? <PageLoader /> : ''}
                 {this.renderAuction()}
                 <Footer />
             </div>
