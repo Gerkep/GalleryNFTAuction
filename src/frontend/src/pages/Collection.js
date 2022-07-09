@@ -40,7 +40,6 @@ class CollectionPage extends React.Component {
     }
 
     renderArtworks = () => {
-        console.log(this.state.artworkList)
         const artworksToRender = this.state.artworkList.map((artwork) => {
             return(
                 <div className="artwork-container appearing">
