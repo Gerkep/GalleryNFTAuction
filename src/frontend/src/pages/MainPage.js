@@ -37,7 +37,7 @@ class MainPage extends React.Component {
                 <div className="vl desktop appearing" id="main-vl"></div>
                 <h1 className="slogan appearing">One Art,<br/>Different Artists.</h1>
                 <h3 className="main-description appearing">Mixing conventional art with latest technology advancements and favorite Gen Z’s artists<span> 🧪 </span></h3>
-                <Link to="/auction"><button className="button main-btn appearing">CHECK OUT EVENTS!</button></Link>
+                <Link to="/events"><button className="button main-btn appearing">CHECK OUT EVENTS!</button></Link>
                 <div className="about-container">
                     <div className="vl"></div>
                     <h2 className="about-header mobile appearing">Living Art.</h2>
@@ -64,7 +64,7 @@ class MainPage extends React.Component {
                     </div>
                 </div>
                 <div className="cta-btn-container appearing">
-                    <Link to="/auction">
+                    <Link to="/events">
                         <button className="button cta-btn">
                             CHECK OUT OUR UPCOMING EVENTS!
                         </button>
