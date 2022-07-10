@@ -1,0 +1,20 @@
+.coming-header{
+    margin-top: 35vh;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+}
+@media screen and (min-width: 1200px) {
+    .coming-header-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .coming-header{
+        margin-top: 35vh;
+        font-size: 5vw;
+        width: 50vw;
+
+    }
+}

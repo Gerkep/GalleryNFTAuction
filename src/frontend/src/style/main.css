@@ -168,12 +168,13 @@ a{
     background-repeat: no-repeat;
 }
 #red-img{
-    background-image: url("../images/mainimg1.png");
+    background-image: url("../images/alexander-popov-vCbKwN2IXT4-unsplash.jpg");
+    background-size: cover;
     top: 16vh;
     left: 8vw;
 }
 #colorful-img{
-    background-image: url("../images/mainimg2.png");
+    background-image: url("../images/labirynth.png");
     top: 30vh;
     left: 42vw;
 }
@@ -278,14 +279,15 @@ a{
     font-size: 3.5vw;
     font-weight: 500;
 }
-#picture-illustration{
-    background-image: url("../images/picture.png");
+#vip-illustration{
+    background-image: url("../images/vip-pass.png");
+
 }
 #tokens-illustration{
     background-image: url("../images/tokens.png");
 }
-#metaverse-illustration{
-    background-image: url("../images/metaverse.png");
+#community-illustration{
+    background-image: url("../images/vip-card.png");
 }
 .cta-btn-container{
     width: 100%;
@@ -347,22 +349,23 @@ a{
     .slogan{
         margin: 35vh 0 0 2.5vw;
         font-size: 4.5vw;
+        line-height: 5vw;
     }
     .main-description{
         font-size: 1.8vw;
-        width: 40vw;
-        margin: 0.5vw 0 0 2.5vw;
+        width: 50vw;
+        margin: 0.7vw 0 0 2.5vw;
     }
     .main-btn{
         width: 30vw;
         height: 6vw;
         border-radius: 20px;
-        margin: 5vh 0 0 2.5vw;
+        margin: 3vw 0 0 2.5vw;
         font-size: 1.8vw;
     }
     .about-container{
         width: 70vw;
-        height: 35vw;
+        height: 33vw;
         margin-left: 12vw;
         margin-top: 30vh;
     }
@@ -373,10 +376,12 @@ a{
     }
     .about-header{
         font-size: 4.5vw;
+        line-height: 5vw;
     }
     .about-description{
         font-size: 1.8vw;
-        margin: 1vw 0 0 7.5vw;
+        margin: 2vw 0 0 7.5vw;
+        width: 50vw;
     }
     .collection-btn{
         height: 5vw;

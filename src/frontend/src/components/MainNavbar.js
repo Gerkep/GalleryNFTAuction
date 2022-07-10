@@ -16,7 +16,7 @@ class Navbar extends React.Component{
         let menuOpen = false;
         const sleep = (milliseconds) => {
             return new Promise(resolve => setTimeout(resolve, milliseconds))
-          }
+    }
 
           const appearingLinks = async () => {
             await sleep(200)
@@ -67,12 +67,12 @@ class Navbar extends React.Component{
                 <div className="menu">
                     <div className="mobile-menu-items">
                             <Link className="mobile-menu-link" to="/collection">Artworks</Link>
-                            <Link className="mobile-menu-link" id="link" to="/auction"><b>Auction</b></Link>
+                            <Link className="mobile-menu-link" id="link" to="/auction"><b>Events</b></Link>
                     </div>
                 </div>
                 <div className="navbar-links">
                     <Link className="navbar-desktop-link" to="/collection">Artworks</Link>
-                    <Link className="navbar-desktop-link" to="/auction"><b>Auction</b></Link>
+                    <Link className="navbar-desktop-link" to="/auction"><b>Events</b></Link>
                 </div>
             </div>
         )

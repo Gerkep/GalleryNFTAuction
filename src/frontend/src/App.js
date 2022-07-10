@@ -12,7 +12,10 @@ import SuccessPage from "./pages/SuccessPage";
 import ErrorPage from "./pages/ErrorPage";
 import "./style/main.css"
 import LoginPage from "./pages/LoginPage";
-
+import Events from "./pages/events/Events";
+import MarketplaceHome from "./pages/events/MarketplaceHome";
+import Profile from "./pages/events/Profile"
+import Event from "./pages/events/Event";
 
  const App = () => {
     return(
@@ -27,6 +30,10 @@ import LoginPage from "./pages/LoginPage";
                         <Route path="/dashboard/auction" exact component={AuctionDashboard} />
                         <Route path="/dashboard/collection" exact component={CollectionDashboard} />
                         <Route path="/login" component={LoginPage} />
+                        <Route path="/events" exact component={Events} />
+                        <Route path="/marketplace" exact component={MarketplaceHome} />
+                        <Route path="/profile" exact component={Profile} />
+                        <Route path="/events/:id" exact component={Event} />
                         <Route path="*" component={ErrorPage} />
                     </Switch>
             </Router>

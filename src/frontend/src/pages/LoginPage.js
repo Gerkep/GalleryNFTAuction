@@ -2,7 +2,7 @@ import React, { useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import {auth, registerWithEmailAndPassword, signInWithGoogle} from "../firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/MainNavbar";
 import "../style/login.css"
 import history from "../history";
 
