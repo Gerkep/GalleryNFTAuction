@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import EventsNavbar from "../../components/EventsNavbar";
 import PageLoader from "../../components/PageLoader";
 
 import "../../style/events/events.css"
@@ -23,7 +23,7 @@ class Events extends React.Component {
     render(){
         return(
             <div>
-                <Navbar openPage="events"/>
+                <EventsNavbar openPage="events"/>
                 {this.state.loadingContent ? <PageLoader /> : ''}
                 <div className="about-events-container">
                     <h1 className="about-events-header">ART X MUSIC</h1>

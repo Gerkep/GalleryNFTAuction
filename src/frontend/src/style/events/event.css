@@ -1,0 +1,135 @@
+.event-page{
+    background-image: url("../../images/labirynth.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mint-container{
+    width: 80vw;
+    height: 110vw;
+    margin-top: 6vw;
+    margin-left: 10vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    padding: 1.5vw 0 2vw 0;
+}
+.mint-time{
+    width: 100%;
+    text-align: center;
+    margin-top: 4vw;
+    font-size: 6vw;
+    font-weight: 700;
+}
+.nft-preview{
+    width: 50vw;
+    height: 45vw;
+    background-image: url("../../images/labirynth.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.nft-title{
+    width: 100%;
+    text-align: center;
+    margin-top: -2vw;
+}
+.mint-about-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: -7vw;
+}
+.cryptocurrency-icon{
+    width: 7vw;
+    height: 8vw;
+}
+.mint-value-container{
+    display: flex;
+    align-items: center;
+    margin-left: 27vw;
+}
+.supply{
+    margin-left: 16vw;
+}
+.mint-btn{
+    width: 50vw;
+    height: 12vw;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 5vw;
+}
+
+@media screen and (min-width: 1200px) {
+    .mint-container{
+        width: 70vw;
+        height: 43.5vw;
+        margin-top: 5vh;
+        margin-left: 18vw;
+        display: block;
+        box-shadow: 5px 9px 30px rgba(0, 0, 0, 0.588);
+    }
+    .about-mint-header{
+        margin-left: 3vw;
+        margin-top: 1vw;
+    }
+    .event-info{
+        margin-left: 3vw;
+    }
+    .mint-time{
+        font-size: 2vw;
+        position: absolute;
+        top: 1vw;
+        right: -26vw;
+    }
+    .nft-preview{
+        width: 20vw;
+        height: 20vw;
+        margin-top: 2.5vw;
+        margin-left: 25vw;
+        border-radius: 10px;
+    }
+    .nft-title{
+        margin-top: 1vw;
+        font-size: 2vw;
+    }
+    .mint-about-container{
+        width: 25vw;
+        margin-left: 22.5vw;
+        margin-top: 0vw;
+    }
+    .cryptocurrency-icon{
+        width: 2vw;
+        height: 2.4vw;
+    }
+    .mint-value-container{
+        margin-left: 19vw;
+    }
+    .value{
+        font-size: 1.1vw;
+    }
+    .supply{
+        margin-left: 0;
+        font-size: 1.1vw;
+        margin-top: 0.5vw;
+    }
+    .mint-btn{
+        width: 25vw;
+        height: 4vw;
+        font-size: 2vw;
+        margin-left: 22.5vw;
+        margin-top: 1vw;
+    }
+}

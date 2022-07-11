@@ -1,10 +1,10 @@
 import ComingSoon from "../ComingSoon";
-import Navbar from "./Navbar";
+import EventsNavbar from "../../components/EventsNavbar";
 
 const MarketplaceHome = (props) => {
     return(
         <div>
-            <Navbar openPage="marketplace"/>
+            <EventsNavbar openPage="marketplace"/>
             <ComingSoon what="MARKETPLACE"/>
         </div>
     )

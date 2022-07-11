@@ -12,9 +12,8 @@ class MainPage extends React.Component {
         this.setState({loadingContent: true})
     }
     componentDidMount(){
-                //opacity from 0 to 1 observer
                 const appearing = document.querySelectorAll('.appearing');
-                //appering animation containers
+
                 function handleIntersection(entries) {
                     entries.map((entry) => {
                       if (entry.isIntersecting) {
@@ -35,7 +34,7 @@ class MainPage extends React.Component {
                 <div className="main-img appearing" id="colorful-img"></div>
                 <div className="main-img appearing" id="red-img"></div>
                 <div className="vl desktop appearing" id="main-vl"></div>
-                <h1 className="slogan appearing">One Art,<br/>Different Artists.</h1>
+                <h1 className="slogan appearing">Doing Art<br/>in Gen Z Style.</h1>
                 <h3 className="main-description appearing">Mixing conventional art with latest technology advancements and favorite Gen Z’s artists<span> 🧪 </span></h3>
                 <Link to="/events"><button className="button main-btn appearing">CHECK OUT EVENTS!</button></Link>
                 <div className="about-container">

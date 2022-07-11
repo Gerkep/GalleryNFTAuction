@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "../../style/events/event-navbar.css"
+import "../style/events/event-navbar.css"
 
 const Navbar = (props) => {
 
