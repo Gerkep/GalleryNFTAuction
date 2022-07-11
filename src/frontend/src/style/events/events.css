@@ -19,12 +19,12 @@
 }
 .events-container{
     margin-top: 0vh;
-    height: 140vw;
+    height: 120vw;
     width: 100vw;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: scroll;
     color: white;
+    padding-bottom: 20vw;
 }
 .events-container::-webkit-scrollbar {
     display: none;
@@ -35,16 +35,15 @@
 }
 .event-highlight{
     width: 82vw;
-    height: 120vw;
+    height: 95vw;
     padding: 4vw;
-    margin: 8vw 5vw 0 5vw;
+    margin: 8vw 5vw 15vw 5vw;
     background-image: url("../../images/labirynth.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 4px 7px 20px rgba(0, 0, 0, 0.499);
     border-radius: 10px;
-    display: inline-block;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -78,7 +77,7 @@
 .event-highlight-song{
     width: 100%;
     text-align: center;
-    margin-top: 25vw;
+    margin-top: 20vw;
     font-size: 12vw;
     white-space: normal;
     text-shadow: 2px 2px black;
@@ -93,7 +92,7 @@
 }
 .event-highlight-location-container{
     margin-left: 45vw;
-    margin-top: 30vw;
+    margin-top: 10vw;
     background-color: white;
     color: black;
     display: flex;
@@ -152,17 +151,20 @@
     }
     .events-container{
         margin-top: 0vh;
-        height: 75vh;
+        height: 37vw;
         width: 87vw;
         margin-left: 13vw;
         overflow-x: hidden;
+        white-space: nowrap;
         flex-wrap: wrap;
+        padding-bottom: 0;
     }
     .event-highlight{
         width: 15vw;
         height: 50vh;
         padding: 2vw;
-        margin: 4vw 2vw 0 2vw;
+        margin: 3vw 2vw 0 2vw;
+        display: inline-block;
     }
     .event-highlight::after{
         display: block;
@@ -195,8 +197,11 @@
     .event-highlight-location-container{
         margin-left: 7.5vw;
         margin-top: 17vh;
+        display: flex;
+        justify-content: left;
         padding: 0.5vw;
-        width: 7.5vw;
+        padding-left: 2vw;
+        width: 14vw;
         height: 1.5vw;
     }
     .highlight-location-icon{
