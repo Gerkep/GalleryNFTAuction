@@ -34,10 +34,10 @@
     scrollbar-width: none; 
 }
 .event-highlight{
-    width: 82vw;
-    height: 95vw;
+    width: 66vw;
+    height: 90vw;
     padding: 4vw;
-    margin: 8vw 5vw 15vw 5vw;
+    margin: 8vw 15vw 15vw 13vw;
     background-image: url("../../images/labirynth.png");
     background-size: cover;
     background-position: center;
@@ -91,8 +91,8 @@
     color: rgba(255, 255, 255, 0.75);
 }
 .event-highlight-location-container{
-    margin-left: 45vw;
-    margin-top: 10vw;
+    margin-left: 30vw;
+    margin-top: 20vw;
     background-color: white;
     color: black;
     display: flex;
@@ -160,9 +160,9 @@
         padding-bottom: 0;
     }
     .event-highlight{
-        width: 15vw;
+        width: 17vw;
         height: 50vh;
-        padding: 2vw;
+        padding: 1vw;
         margin: 3vw 2vw 0 2vw;
         display: inline-block;
     }
@@ -182,10 +182,10 @@
         z-index:1;
     }
     .event-highlight-header{
-        font-size: 1.8vw;
+        font-size: 2.5vw;
     }
     .event-highlight-song{
-        margin-top: 12vh;
+        margin-top: 14vh;
         font-size: 2.5vw;
         font-weight: 900;
     }
@@ -196,7 +196,7 @@
     }
     .event-highlight-location-container{
         margin-left: 7.5vw;
-        margin-top: 17vh;
+        margin-top: 14vh;
         display: flex;
         justify-content: left;
         padding: 0.5vw;

@@ -12,14 +12,11 @@
 }
 .mint-container{
     width: 80vw;
-    height: 110vw;
+    height: 105vw;
     margin-top: 6vw;
     margin-left: 10vw;
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     color: white;
     padding: 1.5vw 0 2vw 0;
 }
@@ -29,10 +26,12 @@
     margin-top: 4vw;
     font-size: 6vw;
     font-weight: 700;
+    height: 1vw;
 }
 .nft-preview{
-    width: 50vw;
-    height: 45vw;
+    width: 60vw;
+    height: 50vw;
+    border-radius: 5px;
     background-image: url("../../images/labirynth.png");
     background-size: cover;
     background-position: center;
@@ -41,25 +40,25 @@
 .nft-title{
     width: 100%;
     text-align: center;
-    margin-top: -2vw;
+    margin-top: 4vw;
 }
 .mint-about-container{
     width: 100%;
     display: flex;
     align-items: center;
-    margin-top: -7vw;
+    margin-top: 3vw;
 }
 .cryptocurrency-icon{
-    width: 7vw;
-    height: 8vw;
+    width: 6vw;
+    height: 7vw;
+}
+.supply{
+    margin-left: 1vw;
 }
 .mint-value-container{
     display: flex;
     align-items: center;
-    margin-left: 27vw;
-}
-.supply{
-    margin-left: 16vw;
+    margin-left: 29vw;
 }
 .mint-btn{
     width: 50vw;
@@ -70,8 +69,20 @@
     border-radius: 10px;
     font-weight: 900;
     font-size: 5vw;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-top: 1vw;
 }
-
+.mint-btn:hover{
+    transform: scale(1.05);
+}
+.nft-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10vw;
+}
 @media screen and (min-width: 1200px) {
     .mint-container{
         width: 70vw;
@@ -92,23 +103,46 @@
         font-size: 2vw;
         position: absolute;
         top: 1vw;
-        right: -26vw;
-    }
-    .nft-preview{
+        right: 14vw;
         width: 20vw;
-        height: 20vw;
+    }
+    .nft-content {
+        margin-top: 0;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "nft-preview mint-about-nft"; 
+      }
+      .mint-about-nft { grid-area: mint-about-nft; }
+    .nft-preview{
+        grid-area: nft-preview;
+        width: 30vw;
+        height: 30vw;
         margin-top: 2.5vw;
-        margin-left: 25vw;
+        margin-left: 3vw;
         border-radius: 10px;
+        transition: all 0.6s ease;
+    }
+    .nft-preview:hover{
+        transform: scale(1.04);
     }
     .nft-title{
-        margin-top: 1vw;
+        margin-top: 2vw;
         font-size: 2vw;
+        text-align: left;
+        margin-left: 5vw;
+    }
+    .nft-description{
+        width: 25vw;
+        margin-left: 5vw;
+        margin-top: 2vw;
     }
     .mint-about-container{
         width: 25vw;
-        margin-left: 22.5vw;
-        margin-top: 0vw;
+        margin-left: 5vw;
+        margin-top: 2vw;
     }
     .cryptocurrency-icon{
         width: 2vw;
@@ -129,7 +163,7 @@
         width: 25vw;
         height: 4vw;
         font-size: 2vw;
-        margin-left: 22.5vw;
         margin-top: 1vw;
+        margin-left: 5vw;
     }
 }

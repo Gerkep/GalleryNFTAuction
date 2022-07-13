@@ -29,7 +29,7 @@ class Events extends React.Component {
                     <h1 className="about-events-header">ART X MUSIC</h1>
                     <p className="about-events-description">
                         Events organised by the rising stars of Gen Z’s
-                         favorite music combined with the visuals provided by 
+                         favorite music combined with stunning visuals prepared by 
                          Victor Gallery.
                     </p>
                 </div>
@@ -37,7 +37,7 @@ class Events extends React.Component {
                 <div className="events-container">
                     <div onClick={this.openEvent} className="event-highlight">
                         <div className="highlight-content">
-                            <h2 className="event-highlight-header">MATA X VICTOR GALLERY</h2>
+                            <h2 className="event-highlight-header">MATA X VG</h2>
                             <h1 className="event-highlight-song">PAPUGA</h1>
                             <p className="event-highlight-date">21.11.2022</p>
                             <div className="event-highlight-location-container">
@@ -48,9 +48,9 @@ class Events extends React.Component {
                     </div>
                     <div onClick={this.openEvent} className="event-highlight" id="nr2">
                         <div className="highlight-content">
-                            <h2 className="event-highlight-header">MATA X VICTOR GALLERY</h2>
-                            <h1 className="event-highlight-song">PAPUGA</h1>
-                            <p className="event-highlight-date">21.11.2022</p>
+                            <h2 className="event-highlight-header">OKI X VG</h2>
+                            <h1 className="event-highlight-song">JEŻYK</h1>
+                            <p className="event-highlight-date">01.12.2022</p>
                             <div className="event-highlight-location-container">
                                 <div className="highlight-location-icon"></div>
                                 <div className="highlight-location">Warsaw</div>
