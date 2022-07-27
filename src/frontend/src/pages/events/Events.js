@@ -32,8 +32,8 @@ class Events extends React.Component {
                          favorite music combined with stunning visuals prepared by 
                          Victor Gallery.
                     </p>
+                    <button className="desktop button connect-wallet">CONNECT WALLET</button>
                 </div>
-                <button className="desktop button connect-wallet">CONNECT WALLET</button>
                 <div className="events-container">
                     <div onClick={this.openEvent} className="event-highlight">
                         <div className="highlight-content">

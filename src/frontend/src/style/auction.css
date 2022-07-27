@@ -106,7 +106,7 @@
     align-items: flex-end;
 }
 .fake-image{
-    background-image: url("../images/mainimg1.png");
+    background-image: url("../images/mainimg1.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

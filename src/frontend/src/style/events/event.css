@@ -13,12 +13,12 @@
 .mint-container{
     width: 80vw;
     height: 105vw;
-    margin-top: 6vw;
+    margin-top: 45vw;
     margin-left: 10vw;
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
     color: white;
-    padding: 1.5vw 0 2vw 0;
+    padding: 4vw 0 4vw 0;
 }
 .mint-time{
     width: 100%;

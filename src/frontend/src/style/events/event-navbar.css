@@ -42,10 +42,10 @@
 }
 @media screen and (min-width: 1200px) {
     .event-navbar{
-        height: 47vw;
+        height: 50vw;
         width: 7vw;
         position: absolute;
-        top: 5vh;
+        top: 2.5vw;
         left: 1.2vw;
         flex-wrap: wrap;
         align-items: flex-start;

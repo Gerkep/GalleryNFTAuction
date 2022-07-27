@@ -31,41 +31,45 @@ class MainPage extends React.Component {
             <div>
                 <Navbar />
                 {this.state.loadingContent ? <PageLoader /> : ''}
-                <div className="main-img appearing" id="colorful-img"></div>
-                <div className="main-img appearing" id="red-img"></div>
-                <div className="vl desktop appearing" id="main-vl"></div>
-                <h1 className="slogan appearing">Doing Art<br/>in Gen Z Style.</h1>
-                <h3 className="main-description appearing">Mixing conventional art with latest technology advancements and favorite Gen Z’s artists<span> 🧪 </span></h3>
-                <Link to="/events"><button className="button main-btn appearing">CHECK OUT EVENTS!</button></Link>
+                <div className="welcome-container">
+                    <div className="main-img appearing" id="colorful-img"></div>
+                    <div className="main-img appearing" id="red-img"></div>
+                    <div className="vl desktop appearing" id="main-vl"></div>
+                    <h1 className="slogan appearing">Cooking <b>Art</b><br/>in <b>Gen Z</b> Style</h1>
+                    <h3 className="main-description appearing">Mixing conventional art with latest technology advancements and favorite Gen Z’s artists<span> 🧪 </span></h3>
+                    <Link to="/events"><button className="button main-btn appearing">CHECK OUT EVENTS!</button></Link>
+                </div>
                 <div className="about-container">
                     <div className="vl"></div>
                     <h2 className="about-header mobile appearing">Living Art.</h2>
                     <h2 className="about-header desktop appearing">Art X<br></br>Modern Music.</h2>
-                    <p className="about-description appearing">Your favorite artist's concerts in an amazing atmosphere of animated art and sick visual effects prepared by our gallery. 
+                    <p className="about-description appearing">Your favorite artist's concerts in amazing atmosphere of animated art and <b>sick visual effects</b> prepared by our gallery. 
                     </p>
                     <Link to="/collection"><button className="button collection-btn">See upcoming events</button></Link>
                     <div className="iphone-mockup mockup-appear"></div>
                 </div>
-                <div className="hl"></div>
-                <h2 className="benefits-header appearing">What you get?</h2>
-                <div className="benefits">
-                    <div className="benefit appearing">
-                        <div className="benefit-illustration " id="vip-illustration"></div>
-                        <p className="benefit-description">Opportunity to meet your favorite artist.</p>
-                    </div>
-                    <div className="benefit appearing">
-                        <div className="benefit-illustration" id="tokens-illustration"></div>
-                        <p className="benefit-description">Gift Tokens for which you can buy NFTs cheaper!</p>
-                    </div>
-                    <div className="benefit appearing">
-                        <div className="benefit-illustration" id="community-illustration"></div>
-                        <p className="benefit-description">Access to our secret community and alpha.</p>
+                <div className="benefits-conatiner">
+                    <div className="hl"></div>
+                    <h2 className="benefits-header appearing">What you get?</h2>
+                    <div className="benefits">
+                        <div className="benefit appearing">
+                            <div className="benefit-illustration " id="vip-illustration"></div>
+                            <p className="benefit-description">Opportunity to meet your favorite artist.</p>
+                        </div>
+                        <div className="benefit appearing">
+                            <div className="benefit-illustration" id="tokens-illustration"></div>
+                            <p className="benefit-description">Gift Tokens for which you can buy NFTs cheaper!</p>
+                        </div>
+                        <div className="benefit appearing">
+                            <div className="benefit-illustration" id="community-illustration"></div>
+                            <p className="benefit-description">Access to newest singles before everyone else.</p>
+                        </div>
                     </div>
                 </div>
                 <div className="cta-btn-container appearing">
                     <Link to="/events">
                         <button className="button cta-btn">
-                            CHECK OUT OUR UPCOMING EVENTS!
+                            JOIN OUR UPCOMING EVENTS!
                         </button>
                     </Link>
                 </div>

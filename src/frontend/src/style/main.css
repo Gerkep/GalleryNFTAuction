@@ -4,7 +4,7 @@
 }
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: white;
+    background-color: #F9F8F8;
 }
 a{
     color: black;
@@ -163,40 +163,43 @@ a{
     border-radius: 15px;
     background-position: center;
     background-size: 107%;
-    box-shadow: 3px 3px 35px rgba(0, 0, 0, 0.394);
+    box-shadow: 3px 3px 35px rgba(0, 0, 0, 0.257);
     position: absolute;
     background-repeat: no-repeat;
 }
 #red-img{
     background-image: url("../images/alexander-popov-vCbKwN2IXT4-unsplash.jpg");
     background-size: cover;
-    top: 16vh;
+    top: 14vh;
     left: 8vw;
 }
 #colorful-img{
     background-image: url("../images/labirynth.png");
-    top: 30vh;
+    top: 27vh;
     left: 42vw;
 }
 .slogan{
-    margin: 51vh 0 0 5vw;
-    font-weight: 800;
+    margin: 49vh 0 0 5vw;
+    font-weight: 900;
     font-size: 9vw;
+}
+.slogan b{
+    font-weight: 900;
 }
 .main-description{
     font-weight: 400;
-    font-size: 3.7vw;
-    width: 80vw;
-    margin: 1vw 0 0 5vw;
+    font-size: 4.7vw;
+    width: 90vw;
+    margin: 2vw 0 0 5vw;
 }
 .main-btn{
     font-family: 'Montserrat', sans-serif;
     width: 60vw;
     height: 14vw;
-    border-radius: 20px;
-    margin: 8vw 0 0 5vw;
+    border-radius: 10px;
+    margin: 7vw 0 0 5vw;
     border: none;
-    box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.296);
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.189);
     font-size: 3.5vw;
 }
 .about-container{
@@ -218,9 +221,9 @@ a{
     font-size: 8.5vw;
 }
 .about-description{
-    width: 45vw;
+    width: 47vw;
     font-weight: 400;
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     margin: 4vw 0 0 7.5vw;
 }
 .collection-btn{
@@ -229,7 +232,7 @@ a{
     height: 10vw;
     text-align: left;
     padding-left: 10%;
-    margin-top: 11vw;
+    margin-top: 8vw;
     font-weight: 400;
 }
 .iphone-mockup{
@@ -251,7 +254,7 @@ a{
 .benefits-header{
     margin: -5.5vw 0 0 7vw;
     font-weight: 800;
-    font-size: 8.5vw;
+    font-size: 9vw;
 }
 .benefits{
     display: flex;
@@ -260,7 +263,7 @@ a{
 }
 .benefit{
     margin-top: 15vw;
-    width: 55vw;
+    width: 60vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -268,15 +271,15 @@ a{
     text-align: center;
 }
 .benefit-illustration{
-    width: 25vw;
-    height: 25vw;
+    width: 30vw;
+    height: 30vw;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 .benefit-description{
     margin-top: 5vw;
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     font-weight: 500;
 }
 #vip-illustration{
@@ -328,33 +331,35 @@ a{
     }
     .page-header{
         text-align: left;
-        margin-top: -2.7vw;
+        margin-top: -2.5vw;
         font-size: 4vw;
-        margin-left: 8vw;
+        margin-left: 7vw;
     }
     #red-img{
-        top: 18vh;
-        left: 50vw;
+        top: 20vh;
+        left: 52vw;
     }
     #colorful-img{
-        top: 42vh;
-        left: 67vw;
+        top: 47vh;
+        left: 70vw;
     }
     #main-vl{
         position: absolute;
         margin-left: 2.5vw;
-        height: 34vh;
+        height: 28vh;
         border: 2px solid black;
+        margin-top: -31vh;
     }
     .slogan{
-        margin: 35vh 0 0 2.5vw;
+        margin: 45vh 0 0 2.5vw;
         font-size: 4.5vw;
         line-height: 5vw;
+        font-weight: 400;
     }
     .main-description{
         font-size: 1.8vw;
         width: 50vw;
-        margin: 0.7vw 0 0 2.5vw;
+        margin: 1vw 0 0 2.5vw;
     }
     .main-btn{
         width: 30vw;
@@ -381,7 +386,7 @@ a{
     .about-description{
         font-size: 1.8vw;
         margin: 2vw 0 0 7.5vw;
-        width: 50vw;
+        width: 45vw;
     }
     .collection-btn{
         height: 5vw;
@@ -394,11 +399,17 @@ a{
         position: absolute;
         margin: -31vw 0 0 55vw;
     }
+    .benefits-conatiner{
+        background-color: rgb(237, 237, 239);
+        margin-top: 10vw;
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+    }
     .hl{
-        margin: 17vw 0 0 0vw;
+        margin: 0vw 0 0 0vw;
     }
     .page-hl{
-        margin-top: 4vw;
+        margin-top: 10vw;
     }
     .benefits-header{
         margin: -3vw 0 0 7vw;

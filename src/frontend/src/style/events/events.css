@@ -1,12 +1,14 @@
 .about-events-container{
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     color: white;
-    margin-top: 5vw;
+    top: 3vw;
     box-shadow: 4px 7px 30px rgba(0, 0, 0, 0.289);
     width: 88vw;
     margin-left: 2.5vw;
     padding: 3vw 2vw 5vw 5vw;
     border-radius: 10px;
+    position: fixed;
+    z-index: 100;
 }
 .about-events-header{
     font-weight: 500;
@@ -18,13 +20,10 @@
     margin-top: 2vw;
 }
 .events-container{
-    margin-top: 0vh;
-    height: 120vw;
+    padding-top: 40vw;
     width: 100vw;
-    overflow-x: hidden;
-    overflow-y: scroll;
     color: white;
-    padding-bottom: 20vw;
+    padding-bottom: 24vw;
 }
 .events-container::-webkit-scrollbar {
     display: none;
@@ -35,21 +34,17 @@
 }
 .event-highlight{
     width: 66vw;
-    height: 90vw;
+    height: 95vw;
     padding: 4vw;
     margin: 8vw 15vw 15vw 13vw;
     background-image: url("../../images/labirynth.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 4px 7px 20px rgba(0, 0, 0, 0.499);
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s ease;
-}
-.event-highlight:hover{
-    transform: scale(1.05);
 }
 #nr2{
     background-image: url("../../images/mainimg1.jpg");
@@ -119,52 +114,65 @@
 
 @media screen and (min-width: 1200px) {
     .about-events-container{
-        width: 55vw;
-        margin-left: 15vw;
-        padding: 2vw;
+        width: 84vw;
+        margin-left: 11vw;
+        padding: 2.5vw 1vw 2.5vw 1vw;
+        background-color: rgb(236, 236, 236);
+        box-shadow: none;
+        color: black;
     }
     .about-events-header{
         font-weight: 500;
         font-size: 2.5vw;
+        margin-left: 2vw;
     }
     .about-events-description{
         font-size: 1.1vw;
         margin-top: 1.5vh;
-        color: rgba(255, 255, 255, 0.78);
+        color: rgba(0, 0, 0, 0.78);
         width: 40vw;
+        margin-left: 2vw;
     }
     .connect-wallet{
         position: absolute;
-        top: 5vh;
+        top: 1.5vw;
         right: 2.5vw;
         border: none;
         padding: 2vh 3vw 2vh 3vw;
         border-radius: 10px;
-        box-shadow: 4px 7px 30px rgba(0, 0, 0, 0.289);
+        box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.212);
+        transition: all 0.5s ease;
+    }
+    .connect-wallet:hover{
+        transform: scale(1.02);
     }
     .events-container::-webkit-scrollbar {
         display: block;
       }
-    .events-container {
-        -ms-overflow-style: block; 
-        scrollbar-width: block; 
-    }
+
     .events-container{
-        margin-top: 0vh;
-        height: 37vw;
-        width: 87vw;
-        margin-left: 13vw;
+        width: 84vw;
+        margin-left: 11vw;
         overflow-x: hidden;
         white-space: nowrap;
         flex-wrap: wrap;
-        padding-bottom: 0;
+        -ms-overflow-style: block; 
+        scrollbar-width: block; 
+        padding: 2.5vw 1vw 2.5vw 1vw;
+        background-color: rgb(236, 236, 236);
+        margin-top: 16vw;
+        border-radius: 10px;
     }
     .event-highlight{
         width: 17vw;
         height: 50vh;
         padding: 1vw;
-        margin: 3vw 2vw 0 2vw;
+        margin: 0vw 2vw 0 2vw;
         display: inline-block;
+    }
+    .event-highlight:hover{
+        transform: scale(1.03);
+        box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.253);
     }
     .event-highlight::after{
         display: block;

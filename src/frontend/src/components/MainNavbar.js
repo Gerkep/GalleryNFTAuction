@@ -72,7 +72,7 @@ class Navbar extends React.Component{
                 </div>
                 <div className="navbar-links">
                     <Link className="navbar-desktop-link" to="/collection">Artworks</Link>
-                    <Link className="navbar-desktop-link" to="/events"><b>Events</b></Link>
+                    <Link className="navbar-desktop-link event-navbar-link" to="/events">Events</Link>
                 </div>
             </div>
         )
