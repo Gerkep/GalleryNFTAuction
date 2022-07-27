@@ -50,6 +50,7 @@
         left: 1.2vw;
         flex-wrap: wrap;
         align-items: flex-start;
+        border-radius: 12px;
     }
     .event-logo{
         width: 3vw;

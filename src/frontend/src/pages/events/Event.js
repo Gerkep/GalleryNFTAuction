@@ -5,7 +5,7 @@ const Event = (props) => {
         <div className="event-page">
             <EventsNavbar openPage="events"/>
             <div className="background-dim"></div>
-            <div className="about-events-container mobile">
+            <div className="about-events-container event-about mobile">
                     <h1 className="about-events-header">MATA X VG</h1>
                     <p className="about-events-description event-info mobile">
                         Collect the <b>entire chorus</b> of  “Papuga” and <b>meet MATA on the backstage</b>!

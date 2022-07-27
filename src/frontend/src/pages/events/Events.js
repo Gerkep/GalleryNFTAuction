@@ -26,13 +26,15 @@ class Events extends React.Component {
                 <EventsNavbar openPage="events"/>
                 {this.state.loadingContent ? <PageLoader /> : ''}
                 <div className="about-events-container">
-                    <h1 className="about-events-header">ART X MUSIC</h1>
-                    <p className="about-events-description">
-                        Events organised by the rising stars of Gen Z’s
-                         favorite music combined with stunning visuals prepared by 
-                         Victor Gallery.
-                    </p>
+                    <div className="events-header-container">
                     <button className="desktop button connect-wallet">CONNECT WALLET</button>
+                        <h1 className="about-events-header">ART X MUSIC</h1>
+                        <p className="about-events-description">
+                            Events organised by the rising stars of Gen Z’s
+                            favorite music combined with stunning visuals prepared by 
+                            Victor Gallery.
+                        </p>
+                    </div>
                 </div>
                 <div className="events-container">
                     <div onClick={this.openEvent} className="event-highlight">

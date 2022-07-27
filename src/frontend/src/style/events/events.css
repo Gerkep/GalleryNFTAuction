@@ -22,6 +22,7 @@
     width: 100vw;
     color: white;
     padding-bottom: 24vw;
+    margin-top: 1vw;
 }
 .events-container::-webkit-scrollbar {
     display: none;
@@ -118,11 +119,13 @@
         background-color: rgb(236, 236, 236);
         box-shadow: none;
         color: black;
+        margin-top: 3vw;
     }
     .about-events-header{
         font-weight: 500;
         font-size: 2.5vw;
         margin-left: 2vw;
+        margin-top: -4vw;
     }
     .about-events-description{
         font-size: 1.1vw;
@@ -132,8 +135,8 @@
         margin-left: 2vw;
     }
     .connect-wallet{
-        position: absolute;
-        top: 1.5vw;
+        margin-left: 67vw;
+        margin-top: 0;
         right: 2.5vw;
         border: none;
         padding: 2vh 3vw 2vh 3vw;
@@ -147,7 +150,6 @@
     .events-container::-webkit-scrollbar {
         display: block;
       }
-
     .events-container{
         width: 84vw;
         margin-left: 11vw;
@@ -158,12 +160,12 @@
         scrollbar-width: block; 
         padding: 2.5vw 1vw 2.5vw 1vw;
         background-color: rgb(236, 236, 236);
-        margin-top: 16vw;
+        margin-top: 2vw;
         border-radius: 10px;
     }
     .event-highlight{
         width: 17vw;
-        height: 50vh;
+        height: 29vw;
         padding: 1vw;
         margin: 0vw 2vw 0 2vw;
         display: inline-block;
