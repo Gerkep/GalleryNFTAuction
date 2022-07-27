@@ -1,10 +1,11 @@
 .event-navbar{
     height: 8vh;
-    width: 90vw;
+    width: 100vw;
     position: absolute;
-    bottom: 4vw;
-    left: 5vw;
-    border-radius: 15px;
+    bottom: 0vw;
+    left: 0vw;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     background-color: rgb(0, 0, 0);
     box-shadow: 4px 10px 35px rgba(0, 0, 0, 0.289);
     display: flex;

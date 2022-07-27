@@ -1,14 +1,12 @@
 .about-events-container{
-    background-color: rgb(20, 20, 20);
-    color: white;
+    background-color: rgb(238, 238, 238);
+    color: rgb(0, 0, 0);
     top: 3vw;
-    box-shadow: 4px 7px 30px rgba(0, 0, 0, 0.289);
     width: 88vw;
     margin-left: 2.5vw;
     padding: 3vw 2vw 5vw 5vw;
     border-radius: 10px;
-    position: fixed;
-    z-index: 100;
+    margin-top: 5vw;
 }
 .about-events-header{
     font-weight: 500;
@@ -20,7 +18,7 @@
     margin-top: 2vw;
 }
 .events-container{
-    padding-top: 40vw;
+    padding-top: 5vw;
     width: 100vw;
     color: white;
     padding-bottom: 24vw;
@@ -33,10 +31,10 @@
     scrollbar-width: none; 
 }
 .event-highlight{
-    width: 66vw;
-    height: 95vw;
+    width: 82vw;
+    height: 110vw;
     padding: 4vw;
-    margin: 8vw 15vw 15vw 13vw;
+    margin: 8vw 15vw 15vw 5vw;
     background-image: url("../../images/labirynth.png");
     background-size: cover;
     background-position: center;
@@ -72,7 +70,7 @@
 .event-highlight-song{
     width: 100%;
     text-align: center;
-    margin-top: 20vw;
+    margin-top: 30vw;
     font-size: 12vw;
     white-space: normal;
     text-shadow: 2px 2px black;
@@ -86,8 +84,8 @@
     color: rgba(255, 255, 255, 0.75);
 }
 .event-highlight-location-container{
-    margin-left: 30vw;
-    margin-top: 20vw;
+    margin-left: 47vw;
+    margin-top: 27vw;
     background-color: white;
     color: black;
     display: flex;
