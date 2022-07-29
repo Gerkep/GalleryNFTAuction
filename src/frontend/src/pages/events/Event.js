@@ -14,9 +14,6 @@ const Event = (props) => {
             <div className="mint-container">
                 <div className="desktop">
                     <h1 className="about-mint-header">MATA X VICTOR GALLERY</h1>
-                    <p className="about-events-description event-info desktop">
-                    Unforgetable event by one of the most well known young stars in Poland. Collect the <b>entire chorus</b> of his most popular song “Papuga” and <b>meet him on the backstage</b>!
-                    </p>
                 </div>
                 <p className="mint-time">01d 23h 12m 34s</p>
                 <div className="nft-content">
@@ -27,7 +24,7 @@ const Event = (props) => {
                     Disclaimer: This is an NFT(digital proof of ownership). If you don't have any previous experience with NFT/cryptocurrency, don't worry! Just take your time, set everything up before the minting process starts and you'll be fine. Here you can find how to do it: onboarding. This tutorial should help you get started and prepare you to buy our NFT. <br></br><br></br>Are you ready? Let's go! <br></br>Collect five of these and meet Mata in person before the concert! 
                     </p>
                     <div className="mint-about-container">
-                        <div className="supply">5/15</div>
+                        <div className="supply"><b>5/15</b></div>
                         <div className="mint-value-container">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/1200px-Ethereum-icon-purple.svg.png" className="cryptocurrency-icon"></img>
                             <p className="value">0.1</p>

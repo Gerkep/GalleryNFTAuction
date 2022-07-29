@@ -125,7 +125,7 @@
         font-weight: 500;
         font-size: 2.5vw;
         margin-left: 2vw;
-        margin-top: -4vw;
+        margin-top: -3vw;
     }
     .about-events-description{
         font-size: 1.1vw;
@@ -136,13 +136,14 @@
     }
     .connect-wallet{
         margin-left: 67vw;
-        margin-top: 0;
+        margin-top: -1vw;
         right: 2.5vw;
         border: none;
-        padding: 2vh 3vw 2vh 3vw;
+        padding: 2vh 3.5vw 2vh 3.5vw;
         border-radius: 10px;
         box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.212);
         transition: all 0.5s ease;
+        font-size: 1vw;
     }
     .connect-wallet:hover{
         transform: scale(1.02);
