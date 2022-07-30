@@ -4,8 +4,6 @@ import history from "./history";
 import AuctionPage from "./pages/Auction";
 import MainPage from "./pages/MainPage";
 import CollectionPage from "./pages/Collection";
-import AuctionDashboard from "./pages/AuctionDashboard";
-import CollectionDashboard from "./pages/CollectionDashbard";
 import AuctionBid from "./pages/AuctionBid";
 import Dashboard from "./pages/Dashboard";
 import SuccessPage from "./pages/SuccessPage";
@@ -27,8 +25,8 @@ import Event from "./pages/events/Event";
                         <Route path="/auction/bid/success" exact component={SuccessPage} />
                         <Route path="/collection" exact component={CollectionPage} />
                         <Route path="/dashboard" exact component={Dashboard} />
-                        <Route path="/dashboard/auction" exact component={AuctionDashboard} />
-                        <Route path="/dashboard/collection" exact component={CollectionDashboard} />
+                        <Route path="/dashboard/auction" exact component={MainPage} />
+                        <Route path="/dashboard/collection" exact component={MainPage} />
                         <Route path="/login" component={LoginPage} />
                         <Route path="/events" exact component={Events} />
                         <Route path="/marketplace" exact component={MarketplaceHome} />

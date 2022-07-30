@@ -1,5 +1,4 @@
 import { combineReducers } from "redux";
-import { reducer as formReducer } from 'redux-form';
 
 const bidReducer = (initialBid = null, action) => {
    if (action.type === 'BID_UPDATED'){
@@ -26,7 +25,6 @@ const transactionReducer = (pending = null, action) => {
    return pending;
 }
 export default combineReducers({
-   form: formReducer,
    bid: bidReducer,
    deposit: depositReducer,
    user: userReducer,
