@@ -2,11 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import "../style/modal.css";
 import history from '../history';
-import api from '../api';
 import { AuctionContract, provider } from "../ethereum/Contracts";
 import { ethers } from "ethers";
 import { connect } from "react-redux";
-import { async } from '@firebase/util';
 
 
 class Modal extends React.Component {

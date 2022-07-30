@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/MainNavbar";
 import Footer from "../components/Footer";
 import history from "../history";
-import api from "../api";
 import { Field, reduxForm } from 'redux-form';
 import { connect } from "react-redux";
 import "../style/collection.css";
@@ -37,7 +36,7 @@ class CollectionDashboard extends React.Component {
             "description": formValues.Description,
             "openseaLink": formValues.OpenseaLink
         }
-       await api.post("/artwork/add", artwork);
+    //    await api.post("/artwork/add", artwork);
        history.push("/collection")
     }
     handleChange = (event) =>{
@@ -45,7 +44,7 @@ class CollectionDashboard extends React.Component {
       }
     deleteFromCollection = async (event) => {
         event.preventDefault();
-        await api.delete(`/artwork/${this.state.id}/delete`);
+        // await api.delete(`/artwork/${this.state.id}/delete`);
         history.push("/collection")
     }
     renderForm = () => {

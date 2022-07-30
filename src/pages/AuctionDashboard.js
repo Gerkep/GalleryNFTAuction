@@ -2,12 +2,8 @@ import React from "react";
 import Navbar from "../components/MainNavbar";
 import Footer from "../components/Footer";
 import history from "../history";
-import api from "../api";
 import { Field, reduxForm } from 'redux-form';
 import { AuctionContract, provider } from "../ethereum/Contracts";
-import { auth, db, logout } from "../firebase/firebase";
-import { query, collection, getDocs, where } from "firebase/firestore";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { connect } from "react-redux";
 import { ethers } from "ethers";
 import "../style/dashboard.css";
@@ -61,9 +57,9 @@ class AuctionDashboard extends React.Component {
     
             }
             this.setState({startPending: false});
-            await api.delete("/auction/delete");
-            await api.post("/artwork/add", artwork);
-            await api.post("/auction/add", auction);
+            // await api.delete("/auction/delete");
+            // await api.post("/artwork/add", artwork);
+            // await api.post("/auction/add", auction);
             history.push("/auction");
         }catch (e) {
             alert("Can't start auction. Check if previous auction is finished/paused and you are using owner's metamask.")
@@ -82,7 +78,7 @@ class AuctionDashboard extends React.Component {
            const tx = await auctionWithSigner.end();
            await tx.wait();
            this.setState({endPending: false})
-           await api.delete("/auction/delete");
+        //    await api.delete("/auction/delete");
            alert("Auction ended successfully.")
         }catch (e){
             this.setState({endPending: false})

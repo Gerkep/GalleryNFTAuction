@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/MainNavbar";
 import Footer from "../components/Footer";
 import "../style/collection.css";
-import api from "../api";
 import ReactPlayer from 'react-player'
 import PageLoader from "../components/PageLoader";
 
@@ -15,12 +14,12 @@ class CollectionPage extends React.Component {
     }
 
     componentDidMount = async () => {
-        await api.get("/artwork/list").then((response) =>{
-            this.setState({artworkList: response.data})
-        })
-        .catch(function (ex) {
-            console.log('Response parsing failed. Error: ', ex);
-        });;
+        // await api.get("/artwork/list").then((response) =>{
+        //     this.setState({artworkList: response.data})
+        // })
+        // .catch(function (ex) {
+        //     console.log('Response parsing failed. Error: ', ex);
+        // });;
 
         //opacity from 0 to 1 observer
         const appearing = document.querySelectorAll('.appearing');

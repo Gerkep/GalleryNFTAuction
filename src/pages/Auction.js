@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/MainNavbar";
 import Footer from "../components/Footer";
-import api from "../api";
+// import api from "../api";
 import "../style/auction.css"
 import { AuctionContract, provider } from "../ethereum/Contracts";
 import { ethers } from "ethers";
@@ -19,18 +19,18 @@ class AuctionPage extends React.Component {
     }
     componentDidMount = async () => {
         try{
-            const auctions = await api.get("/auction/list").then((result) => result.data)
-            await provider.send("eth_requestAccounts", []);
-            const auctionWithProvider = AuctionContract.connect(provider);
-            const highestBid = await auctionWithProvider.getHighestBid();
-            const startTime = await auctionWithProvider.getStartTime();
-            const endTime = await auctionWithProvider.getEndTime();
-            const startTimeAsNumber = startTime.toNumber()* 1000;
-            const endTimeAsNumber = endTime.toNumber()* 1000;
-            const highestBidInETH = ethers.utils.formatEther(highestBid);
-            const highestBidAsNumber = highestBidInETH.toString();
-            this.setState({auctions: auctions, highestBid: highestBidAsNumber, startTimeState: startTimeAsNumber, endTimeState: endTimeAsNumber, deposit: '', depositShowed: false});
-            this.setState({loadingContent: false})
+            // const auctions = await api.get("/auction/list").then((result) => result.data)
+            // await provider.send("eth_requestAccounts", []);
+            // const auctionWithProvider = AuctionContract.connect(provider);
+            // const highestBid = await auctionWithProvider.getHighestBid();
+            // const startTime = await auctionWithProvider.getStartTime();
+            // const endTime = await auctionWithProvider.getEndTime();
+            // const startTimeAsNumber = startTime.toNumber()* 1000;
+            // const endTimeAsNumber = endTime.toNumber()* 1000;
+            // const highestBidInETH = ethers.utils.formatEther(highestBid);
+            // const highestBidAsNumber = highestBidInETH.toString();
+            // this.setState({auctions: auctions, highestBid: highestBidAsNumber, startTimeState: startTimeAsNumber, endTimeState: endTimeAsNumber, deposit: '', depositShowed: false});
+            // this.setState({loadingContent: false})
         }catch(e){
             alert("Ooops! Your browser can't handle web3 or you don't have a Metamask account. Try Google Chrome with Metamask extension set up! PS. Remember to change your network to RINKEBY!")
         }

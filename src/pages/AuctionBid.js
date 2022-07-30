@@ -1,18 +1,15 @@
 import React from "react";
 import Navbar from "../components/MainNavbar";
 import Footer from "../components/Footer";
-import api from "../api";
+// import api from "../api";
 import "../style/auction.css"
-import { AuctionContract, provider } from "../ethereum/Contracts";
-import { ethers } from "ethers";
 import Modal from "../components/Modal";
-import { connect } from "react-redux";
 
 class AuctionBid extends React.Component {
     state = ({auctions: []})
     componentDidMount = async () => {
-        const auctions = await api.get("/auction/list").then((result) => result.data)
-        this.setState({auctions: auctions});
+        // const auctions = await api.get("/auction/list").then((result) => result.data)
+        // this.setState({auctions: auctions});
     }
     renderAuction = () => {
             return(
