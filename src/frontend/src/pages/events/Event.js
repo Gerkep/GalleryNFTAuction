@@ -26,7 +26,7 @@ const Event = (props) => {
                     <div className="mint-about-container">
                         <div className="supply"><b>5/15</b></div>
                         <div className="mint-value-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/1200px-Ethereum-icon-purple.svg.png" className="cryptocurrency-icon"></img>
+                            <img alt="Ehtereum" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/1200px-Ethereum-icon-purple.svg.png" className="cryptocurrency-icon"></img>
                             <p className="value">0.1</p>
                         </div>
                     </div>
